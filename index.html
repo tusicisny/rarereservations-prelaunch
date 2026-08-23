@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rare Reservations | Book Hard-to-Get Restaurant Tables with AI</title>
+  <meta name="description" content="Choose dates and restaurants. We will help you book a table as soon as it appears." />
+  <style>
+    /* CSS Variables & Reset */
+    :root {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F4F4F4;
+      --text-primary: #1a1a1a;
+      --heading-color: #000000;
+      --accent-color: #c9261a;
+      --accent-hover: #a81e14;
+      --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout Components */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .nav-brand {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--heading-color);
+      text-transform: uppercase;
+    }
+
+    .nav-brand span {
+      color: var(--accent-color);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 0 0 60px;
+      text-align: center;
+    }
+
+    .hero-image-full {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      height: 360px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .hero-image-full img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #4a4a4a;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    /* Waitlist Form */
+    .form-container {
+      background-color: var(--bg-secondary);
+      padding: 32px;
+      border-radius: 8px;
+      max-width: 540px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .waitlist-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 600px) {
+      .waitlist-form {
+        flex-direction: row;
+      }
+    }
+
+    .waitlist-form input[type="email"] {
+      flex: 1;
+      padding: 16px;
+      border: 1px solid #CCCCCC;
+      border-radius: 4px;
+      font-size: 16px;
+      font-family: var(--font-stack);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .waitlist-form input[type="email"]:focus {
+      border-color: var(--heading-color);
+    }
+
+    .waitlist-form button {
+      background-color: var(--accent-color);
+      color: #FFFFFF;
+      border: none;
+      padding: 16px 28px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: var(--font-stack);
+      cursor: pointer;
+      transition: background-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .waitlist-form button:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .form-guarantee {
+      font-size: 13px;
+      color: #666666;
+      margin-top: 12px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-bg {
+      background-color: var(--bg-secondary);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 56px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+    }
+
+    /* Grids & Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--bg-primary);
+      padding: 36px;
+      border-radius: 8px;
+      border: 1px solid #EAEAEA;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+    }
+
+    /* Audience Section */
+    .audience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .audience-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .audience-item:last-child {
+      border-bottom: none;
+    }
+
+    .audience-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    /* Trust Banner */
+    .trust-banner {
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .trust-banner h2 {
+      color: #FFFFFF;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .trust-banner p {
+      color: #CCCCCC;
+      font-size: 18px;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      background-color: var(--bg-primary);
+      border-top: 1px solid #E5E5E5;
+      font-size: 13px;
+      color: #777777;
+      text-align: center;
+    }
+
+    /* Mobile Responsive Breakpoints */
+    @media (max-width: 768px) {
+      section {
+        padding: 48px 0;
+      }
+      .hero-image-full {
+        height: 220px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+      .section-header h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav-brand">Rare <span>Reservations</span></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-image-full">
+        <img src="ben-koorengevel-Vd0_Htlb-Kk-unsplash.jpg" alt="Exclusive fine dining setting" loading="eager" />
+      </div>
+      <div class="container">
+        <h1>Fine dining shouldn't feel like a stressful part-time job</h1>
+        <p>Rare Reservations secures hard-to-get restaurant bookings for your special nights</p>
+        
+        <!-- Web3Forms Form Container -->
+        <div class="form-container">
+          <form action="https://api.web3forms.com/submit" method="POST" class="waitlist-form">
+            <!-- REPLACE 'YOUR_ACCESS_KEY_HERE' WITH YOUR ACTUAL WEB3FORMS ACCESS KEY -->
+            <input type="hidden" name="access_key" value="c1111094-795f-4755-ab85-fd71ef7e530c" />
+            <input type="hidden" name="subject" value="New Rare Reservations Waitlist Signup" />
+            <input type="hidden" name="from_name" value="Rare Reservations Waitlist" />
+            
+            <input type="email" name="email" placeholder="Enter your email address" required />
+            <button type="submit">Join the Waitlist</button>
+          </form>
+          <div class="form-guarantee">Your first booking is on us. No credit card needed.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>We've all experienced the frustration of trying to book a world-class culinary experience</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>The midnight refresh war</h3>
+            <p>You set a midnight alarm 30 days in advance, sit with your phone, and refresh the screen right at midnight. Within half a second, every single table is gone.</p>
+          </div>
+
+          <div class="card">
+            <h3>The black market trap</h3>
+            <p>Desperate, you consider paying hundreds of dollars on a secondary marketplace. But if your name doesn't match the booking, you risk getting turned away at the door in front of your guests.</p>
+          </div>
+
+          <div class="card">
+            <h3>The account ban risk</h3>
+            <p>Auto-booking bots aggressively violate booking platform rules. Using them puts your Resy account and Amex Global Dining Access at risk of permanent bans.</p>
+          </div>
+
+          <div class="card">
+            <h3>The schedule mismatch</h3>
+            <p>Executive calendars and client dinners solidify only days in advance. By then, it's difficult for executive assistants and concierges to find any available tables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Value Proposition Section -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>Rare Reservations acts as your personal AI concierge, working around the clock so you don't have to</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="feature-icon">01</div>
+            <h3>Personalized</h3>
+            <p>Our AI concierge works with your own accounts. You own the reservation and your name is always on it. You can leverage your credit card perks and special access.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">02</div>
+            <h3>Always-on</h3>
+            <p>Missed the initial drop? Our intelligent 24/7 scouting engine monitors last-minute cancellations continuously. The instant a table opens up, we secure it.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">03</div>
+            <h3>Risk-free</h3>
+            <p>Your first booking is completely free. After that, we operate strictly on a success-based model: if we can't secure your requested table, you pay absolutely nothing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>Designed for diners who value time and peace of mind</h2>
+        </div>
+
+        <div class="audience-list">
+          <div class="audience-item">
+            <div class="audience-title">ROI on your credit card</div>
+            <p>You pay $695+/year for top-tier credit cards to enjoy dining perks, yet you still can't find any open tables. We help you realize the true value of your card perks by booking the most coveted tables for you.</p>
+          </div>
+
+          <div class="audience-item">
+            <div class="audience-title">Client meetings</div>
+            <p>Need to secure a last-minute business dinner at a hard-to-get venue for your executives? Set target venues and dates in seconds and let our set-and-forget scouting engine deliver reservations for your clients.</p>
+          </div>
+
+          <div class="audience-item">
+            <div class="audience-title">Special celebrations</div>
+            <p>Planning an anniversary, proposal, or birthday? Don't leave your special evening to chance or risk shady scalper sites. Set primary and backup restaurant preferences to guarantee your perfect night happens.</p>
+          </div>
+
+          <div class="audience-item">
+            <div class="audience-title">Culinary trips</div>
+            <p>Traveling across the globe to experience world-class gastronomy? We handle your itinerary and secure all the reservations before you even pack your bags.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Credibility Banner -->
+    <section class="trust-banner">
+      <div class="container">
+        <h2>Built on trust & transparency</h2>
+        <p>
+          We never store your credit card information or your platform password.<br>
+          We act strictly as your authorized agent to execute bookings on your behalf.<br>
+          We do not resell reservations.<br>
+          Reselling tables violates our Terms of Service and results in a permanent account ban.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rare Reservations S.L. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
