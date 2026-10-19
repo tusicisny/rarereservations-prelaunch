@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rare Reservations | Book Hard-to-Get Restaurant Tables with AI</title>
   <meta name="description" content="Choose dates and restaurants. We will help you book a table as soon as it appears." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     /* CSS Variables & Reset */
     :root {
@@ -14,7 +15,7 @@
       --heading-color: #000000;
       --accent-color: #c9261a;
       --accent-hover: #a81e14;
-      --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-stack: Inter, Arial, sans-serif;
     }
 
     * {
@@ -59,16 +60,26 @@
       border-bottom: 1px solid #E5E5E5;
     }
 
-    .nav-brand {
+    .nav-brand,
+    .nav-brand:hover,
+    .nav-brand:focus,
+    .nav-brand:active {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.5px;
-      color: var(--heading-color);
+      color: var(--accent-color);
       text-transform: uppercase;
+      text-decoration: none !important;
     }
 
-    .nav-brand span {
-      color: var(--accent-color);
+    .brand-logo {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      display: block;
     }
 
     /* Hero Section */
@@ -289,6 +300,13 @@
       text-align: center;
     }
 
+    footer .footer-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
     /* Mobile Responsive Breakpoints */
     @media (max-width: 768px) {
       section {
@@ -311,7 +329,10 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="nav-brand">Rare <span>Reservations</span></div>
+      <a href="index.html" class="nav-brand">
+        <img src="logo.svg" alt="Rare Reservations Logo" class="brand-logo" width="40" height="40" />
+        <span>Rare Reservations</span>
+      </a>
     </div>
   </header>
 
@@ -450,9 +471,9 @@
   <footer>
     <div class="container">
       <p>&copy; 2026 Rare Reservations S.L. All rights reserved.</p>
-      <div style="margin-top: 12px; display: flex; justify-content: center; gap: 20px;">
-        <a href="index.html" style="color: #555555; text-decoration: none;">Home</a> &bull;
-        <a href="aviso-legal.html" style="color: #555555; text-decoration: none;">Aviso Legal</a>
+      <div class="footer-links">
+        <a href="index.html">Home</a> &bull;
+        <a href="aviso-legal.html">Aviso Legal</a>
       </div>
     </div>
   </footer>

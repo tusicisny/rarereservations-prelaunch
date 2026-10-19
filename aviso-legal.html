@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aviso Legal | Rare Reservations</title>
   <meta name="description" content="Información legal y datos identificativos de Rare Reservations, S.L. en cumplimiento de la LSSI-CE." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     /* CSS Variables & Reset */
     :root {
@@ -14,7 +15,7 @@
       --heading-color: #000000;
       --accent-color: #c9261a;
       --accent-hover: #a81e14;
-      --font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-stack: Inter, Arial, sans-serif;
     }
 
     * {
@@ -65,26 +66,26 @@
       align-items: center;
     }
 
-    .nav-brand {
+    .nav-brand,
+    .nav-brand:hover,
+    .nav-brand:focus,
+    .nav-brand:active {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.5px;
-      color: var(--heading-color);
+      color: var(--accent-color);
       text-transform: uppercase;
+      text-decoration: none !important;
     }
 
-    .nav-brand span {
-      color: var(--accent-color);
-    }
-
-    .back-link {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .back-link:hover {
-      color: var(--accent-color);
+    .brand-logo {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      display: block;
     }
 
     /* Content Area */
@@ -120,7 +121,6 @@
     .legal-card h2 {
       font-size: 20px;
       margin-bottom: 16px;
-      color: var(--accent-color);
     }
 
     .info-grid {
@@ -185,14 +185,6 @@
       gap: 20px;
     }
 
-    footer .footer-links a {
-      color: #555555;
-    }
-
-    footer .footer-links a:hover {
-      color: var(--accent-color);
-    }
-
     @media (max-width: 768px) {
       .legal-page {
         padding: 40px 0;
@@ -208,7 +200,10 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="nav-brand">Rare <span>Reservations</span></div>
+      <a href="index.html" class="nav-brand">
+        <img src="logo.svg" alt="Rare Reservations Logo" class="brand-logo" width="40" height="40" />
+        <span>Rare Reservations</span>
+      </a>
     </div>
   </header>
 
