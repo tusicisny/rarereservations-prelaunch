@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rare Reservations | Book Hard-to-Get Restaurant Tables with AI</title>
-  <meta name="description" content="Choose dates and restaurants. We will help you book a table as soon as it appears." />
+  <title>Rare Reservations | Alerts the Moment a Hard-to-Book Table Opens</title>
+  <meta name="description" content="Fully booked isn't final. We watch hard-to-book restaurants for table releases and cancellations and send you a link to the restaurant's own booking page. You book with your own account." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     /* CSS Variables & Reset */
@@ -113,7 +113,8 @@
     .hero p {
       font-size: 20px;
       color: #4a4a4a;
-      margin-bottom: 32px;
+      max-width: 760px;
+      margin: 0 auto 32px;
       font-weight: 400;
     }
 
@@ -197,6 +198,12 @@
       font-size: 36px;
     }
 
+    .section-header p {
+      font-size: 18px;
+      color: #4a4a4a;
+      margin-top: 16px;
+    }
+
     /* Grids & Cards */
     .grid-2 {
       display: grid;
@@ -208,6 +215,24 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 32px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     @media (min-width: 768px) {
@@ -290,6 +315,43 @@
       line-height: 1.8;
     }
 
+    /* Company Section */
+    .company {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .company p {
+      font-size: 16px;
+      color: #4a4a4a;
+      margin-bottom: 16px;
+    }
+
+    .company-details {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 8px 24px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #E5E5E5;
+      font-size: 15px;
+    }
+
+    .company-details dt {
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    @media (max-width: 600px) {
+      .company-details {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+      .company-details dd {
+        margin-bottom: 12px;
+      }
+    }
+
     /* Footer */
     footer {
       padding: 48px 0;
@@ -340,12 +402,12 @@
   <main>
     <section class="hero">
       <div class="hero-image-full">
-        <img src="ben-koorengevel-Vd0_Htlb-Kk-unsplash.jpg" alt="Exclusive fine dining setting" loading="eager" />
+        <img src="ben-koorengevel-Vd0_Htlb-Kk-unsplash.jpg" alt="Fine dining table set for service" loading="eager" />
       </div>
       <div class="container">
-        <h1>Fine dining shouldn't feel like a stressful part-time job</h1>
-        <p>Rare Reservations secures hard-to-get restaurant bookings for your special nights</p>
-        
+        <h1>Fully booked? Know the moment a table opens</h1>
+        <p>Rare Reservations watches hard-to-book restaurants for new table releases and cancellations. The moment a table opens, we send you a link to the restaurant's own booking page with your data already filled in. You book it yourself, with your own account.</p>
+
         <!-- Web3Forms Form Container -->
         <div class="form-container">
           <form action="https://api.web3forms.com/submit" method="POST" class="waitlist-form">
@@ -353,101 +415,129 @@
             <input type="hidden" name="access_key" value="c1111094-795f-4755-ab85-fd71ef7e530c" />
             <input type="hidden" name="subject" value="New Rare Reservations Waitlist Signup" />
             <input type="hidden" name="from_name" value="Rare Reservations Waitlist" />
-            
+
             <input type="email" name="email" placeholder="Enter your email address" required />
             <button type="submit">Join the Waitlist</button>
           </form>
-          <div class="form-guarantee">Your first booking is on us. No credit card needed.</div>
+          <div class="form-guarantee">We'll email you when we launch. No credit card needed, and you can unsubscribe at any time.</div>
         </div>
       </div>
     </section>
 
-    <!-- Pain Points Section -->
+    <!-- Problem Section -->
     <section class="section-bg">
       <div class="container">
         <div class="section-header">
-          <h2>We've all experienced the frustration of trying to book a world-class culinary experience</h2>
-        </div>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>The midnight refresh war</h3>
-            <p>You set a midnight alarm 30 days in advance, sit with your phone, and refresh the screen right at midnight. Within half a second, every single table is gone.</p>
-          </div>
-
-          <div class="card">
-            <h3>The black market trap</h3>
-            <p>Desperate, you consider paying hundreds of dollars on a secondary marketplace. But if your name doesn't match the booking, you risk getting turned away at the door in front of your guests.</p>
-          </div>
-
-          <div class="card">
-            <h3>The account ban risk</h3>
-            <p>Auto-booking bots aggressively violate booking platform rules. Using them puts your Resy account and Amex Global Dining Access at risk of permanent bans.</p>
-          </div>
-
-          <div class="card">
-            <h3>The schedule mismatch</h3>
-            <p>Executive calendars and client dinners solidify only days in advance. By then, it's difficult for executive assistants and concierges to find any available tables.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Unique Value Proposition Section -->
-    <section>
-      <div class="container">
-        <div class="section-header">
-          <h2>Rare Reservations acts as your personal AI concierge, working around the clock so you don't have to</h2>
+          <h2>The best tables are gone in seconds</h2>
         </div>
 
         <div class="grid-3">
           <div class="card">
+            <h3>Refreshing doesn't work</h3>
+            <p>If you can't sit on a booking page at midnight, you lose to bots and to VIP users who get platform notifications first. Cancellations can appear at any hour and disappear just as fast.</p>
+          </div>
+
+          <div class="card">
+            <h3>The workarounds backfire</h3>
+            <p>Auto-booking bots put your account at risk of a ban. Resale marketplaces bring scams, inflated prices and reservations voided at the door by ID checks.</p>
+          </div>
+
+          <div class="card">
+            <h3>Missing out costs more than a meal</h3>
+            <p>A missed anniversary. A trip planned around one dinner that never happens. An executive assistant who has to tell the boss no.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>&ldquo;Fully booked&rdquo; isn't final</h2>
+          <p>Tables come back every day. We watch for them so you don't have to, and you stay in control of the booking.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
             <div class="feature-icon">01</div>
-            <h3>Personalized</h3>
-            <p>Our AI concierge works with your own accounts. You own the reservation and your name is always on it. You can leverage your credit card perks and special access.</p>
+            <h3>Pick your tables</h3>
+            <p>Choose the restaurants, dates and party size you want.</p>
           </div>
 
           <div class="card">
             <div class="feature-icon">02</div>
-            <h3>Always-on</h3>
-            <p>Missed the initial drop? Our intelligent 24/7 scouting engine monitors last-minute cancellations continuously. The instant a table opens up, we secure it.</p>
+            <h3>We watch</h3>
+            <p>We track each restaurant's scheduled releases and check for cancellations around the clock.</p>
           </div>
 
           <div class="card">
             <div class="feature-icon">03</div>
-            <h3>Risk-free</h3>
-            <p>Your first booking is completely free. After that, we operate strictly on a success-based model: if we can't secure your requested table, you pay absolutely nothing.</p>
+            <h3>You get an alert</h3>
+            <p>The moment a table opens, we message you on the channel you chose: WhatsApp, text, email or push.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">04</div>
+            <h3>You book it</h3>
+            <p>The link opens the restaurant's own booking page with your date and party size filled in. You book with your own account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Rare Reservations</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>No account risk</h3>
+            <p>We never log in to your account, use your credit card or book on your behalf. You book on the restaurant's official booking page with your own account. You're just much faster than before.</p>
+          </div>
+
+          <div class="card">
+            <h3>We know when tables open, even where restaurants don't say</h3>
+            <p>94% of fine dining establishments don't publish table release times. We learn each restaurant's release day and time from our own checks, then alert you within seconds of the next release.</p>
+          </div>
+
+          <div class="card">
+            <h3>Cancellations, watched around the clock</h3>
+            <p>10-15% reservations get cancelled. Cancellations can happen anytime. Be among the first to know.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Who We Serve -->
-    <section class="section-bg">
+    <section>
       <div class="container">
         <div class="section-header">
-          <h2>Designed for diners who value time and peace of mind</h2>
+          <h2>For diners who can't afford to miss the moment</h2>
         </div>
 
         <div class="audience-list">
           <div class="audience-item">
-            <div class="audience-title">ROI on your credit card</div>
-            <p>You pay $695+/year for top-tier credit cards to enjoy dining perks, yet you still can't find any open tables. We help you realize the true value of your card perks by booking the most coveted tables for you.</p>
-          </div>
-
-          <div class="audience-item">
-            <div class="audience-title">Client meetings</div>
-            <p>Need to secure a last-minute business dinner at a hard-to-get venue for your executives? Set target venues and dates in seconds and let our set-and-forget scouting engine deliver reservations for your clients.</p>
+            <div class="audience-title">Culinary trips</div>
+            <p>You are in San Sebastián for three nights and the restaurant you planned the trip around is fully booked. Set a watch for your travel dates and get release times in your own time zone, not the restaurant's.</p>
           </div>
 
           <div class="audience-item">
             <div class="audience-title">Special celebrations</div>
-            <p>Planning an anniversary, proposal, or birthday? Don't leave your special evening to chance or risk shady scalper sites. Set primary and backup restaurant preferences to guarantee your perfect night happens.</p>
+            <p>Planning an anniversary, proposal or birthday? Watch your first-choice restaurant and a few backups, and skip the resale sites that can leave you at the door with a voided booking.</p>
           </div>
 
           <div class="audience-item">
-            <div class="audience-title">Culinary trips</div>
-            <p>Traveling across the globe to experience world-class gastronomy? We handle your itinerary and secure all the reservations before you even pack your bags.</p>
+            <div class="audience-title">Regular fine diners</div>
+            <p>You know the release schedules and you've tried the platform alerts. We cover the restaurants that don't publish release times and watch for cancellations while you get on with your day.</p>
+          </div>
+
+          <div class="audience-item">
+            <div class="audience-title">Executive assistants and concierges</div>
+            <p>Client dinners get confirmed days ahead, not weeks. Set watches for several venues and dates in seconds, and book in your principal's name the moment a table opens.</p>
           </div>
         </div>
       </div>
@@ -458,11 +548,39 @@
       <div class="container">
         <h2>Built on trust & transparency</h2>
         <p>
-          We never store your credit card information or your platform password.<br>
-          We act strictly as your authorized agent to execute bookings on your behalf.<br>
-          We do not resell reservations.<br>
-          Reselling tables violates our Terms of Service and results in a permanent account ban.
+          We never ask for your booking platform password and never log in for you.<br>
+          We never make, hold or resell reservations. You book directly with the restaurant.<br>
+          Every alert links to the restaurant's official booking page.<br>
+          We message you only on the channels you opt into, and you can stop alerts at any time.
         </p>
+      </div>
+    </section>
+
+    <!-- Company -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>About Rare Reservations</h2>
+        </div>
+
+        <div class="company">
+          <p>Rare Reservations is an independent technology company based in Barcelona. We are launching a table availability alert service for hard-to-book restaurants, starting with destination restaurants in Spain, France, the United States and the UK.</p>
+          <p>Our technology combines shared, low-volume availability monitoring with a growing dataset of release times, booking speed and cancellation patterns that we learn from our own checks. We are not affiliated with any restaurant or booking platform, and we don't charge restaurants or sell their tables.</p>
+          <p>We are currently testing ahead of a public launch. Join the waitlist above to hear when we open.</p>
+
+          <dl class="company-details">
+            <dt>Company</dt>
+            <dd>Rare Reservations, S.L.</dd>
+            <dt>Registered office</dt>
+            <dd>Barcelona, Spain</dd>
+            <dt>Tax ID (NIF)</dt>
+            <dd>B93948263</dd>
+            <dt>Registry</dt>
+            <dd>Registro Mercantil de Barcelona, Hoja B-662569</dd>
+            <dt>Contact</dt>
+            <dd><a href="mailto:support@rarereservations.com">support@rarereservations.com</a></dd>
+          </dl>
+        </div>
       </div>
     </section>
   </main>
@@ -470,9 +588,11 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Rare Reservations S.L. All rights reserved.</p>
+      <p>&copy; 2026 Rare Reservations, S.L. All rights reserved.</p>
+      <p>Rare Reservations is independent and not affiliated with any restaurant or booking platform.</p>
       <div class="footer-links">
         <a href="index.html">Home</a> &bull;
+        <a href="mailto:support@rarereservations.com">Contact</a> &bull;
         <a href="aviso-legal.html">Aviso Legal</a>
       </div>
     </div>
