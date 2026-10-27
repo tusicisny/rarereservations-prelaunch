@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Rare Reservations</title>
+  <meta name="description" content="The contract between you and Rare Reservations, S.L. for using our restaurant table alert service." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    /* CSS Variables & Reset */
+    :root {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F4F4F4;
+      --text-primary: #1a1a1a;
+      --heading-color: #000000;
+      --accent-color: #c9261a;
+      --accent-hover: #a81e14;
+      --font-stack: Inter, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout Components */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand,
+    .nav-brand:hover,
+    .nav-brand:focus,
+    .nav-brand:active {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      text-decoration: none !important;
+    }
+
+    .brand-logo {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Content Area */
+    .legal-page {
+      padding: 60px 0 80px;
+    }
+
+    .legal-header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--heading-color);
+      padding-bottom: 24px;
+    }
+
+    .legal-header h1 {
+      font-size: 38px;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .legal-header p {
+      font-size: 15px;
+      color: #666666;
+    }
+
+    .legal-card {
+      background: var(--bg-secondary);
+      padding: 32px;
+      border-radius: 8px;
+      margin-bottom: 36px;
+      border: 1px solid #EAEAEA;
+    }
+
+    .legal-card h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .info-grid {
+        grid-template-columns: 200px 1fr;
+      }
+    }
+
+    .info-label {
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .info-value {
+      color: var(--text-primary);
+    }
+
+    .legal-section {
+      margin-bottom: 32px;
+    }
+
+    .legal-section h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      padding-top: 8px;
+    }
+
+    .legal-section p, .legal-section ul {
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul {
+      padding-left: 20px;
+    }
+
+    .legal-section li {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      background-color: var(--bg-primary);
+      border-top: 1px solid #E5E5E5;
+      font-size: 13px;
+      color: #777777;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .legal-page {
+        padding: 40px 0;
+      }
+      .legal-header h1 {
+        font-size: 28px;
+      }
+    }
+    /* Long-form legal documents */
+    .legal-doc {
+      max-width: 860px;
+    }
+
+    .legal-doc h2 {
+      font-size: 22px;
+      margin: 40px 0 12px;
+      scroll-margin-top: 16px;
+    }
+
+    .legal-doc h3 {
+      font-size: 17px;
+      margin: 24px 0 8px;
+      scroll-margin-top: 16px;
+    }
+
+    .legal-doc p, .legal-doc ul, .legal-doc ol {
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+
+    .legal-doc ul, .legal-doc ol {
+      padding-left: 22px;
+    }
+
+    .legal-doc li {
+      margin-bottom: 6px;
+    }
+
+    .legal-doc li > ul, .legal-doc li > p {
+      margin-top: 6px;
+    }
+
+    .legal-doc hr {
+      border: none;
+      border-top: 1px solid #E5E5E5;
+      margin: 48px 0 8px;
+    }
+
+    .legal-doc code {
+      font-size: 13px;
+      background: var(--bg-secondary);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 20px;
+      border: 1px solid #EAEAEA;
+      border-radius: 8px;
+    }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      color: #333333;
+    }
+
+    .legal-table th, .legal-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 14px;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    .legal-table tr:last-child th, .legal-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .legal-table thead th {
+      background: var(--bg-secondary);
+      color: var(--heading-color);
+    }
+
+    .kv-table th[scope="row"] {
+      width: 32%;
+      background: var(--bg-secondary);
+      color: var(--heading-color);
+    }
+
+    @media (max-width: 640px) {
+      .legal-table {
+        min-width: 560px;
+      }
+      .kv-table {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.svg" alt="Rare Reservations Logo" class="brand-logo" width="40" height="40" />
+        <span>Rare Reservations</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Legal Main Content -->
+  <main class="container legal-page legal-doc">
+    <div class="legal-header">
+      <h1>Terms of Service</h1>
+      <p>Effective date: October 27, 2026</p>
+    </div>
+
+<p>These Terms of Service ("Terms") are a contract between you and <strong>Rare Reservations S.L.</strong> ("Rare Reservations", "we", "us"). They cover your use of rarereservations.com, our table alerts and everything else we provide (together, the "Service").</p>
+<p><strong>The short version.</strong> We watch restaurant booking pages and tell you when a table that matches your dates, times and party size appears. You then book it yourself, on the restaurant's own booking page, with your own account. We never log in, hold a reservation or book for you, so we can't promise you'll get the table. Free accounts get alerts 2 minutes after paid accounts. A Pass never renews. A Membership renews until you cancel, and you can cancel in one step in Settings. If you live in the EU, the UK or Switzerland, you can withdraw within 14 days (section 9.3). If you live in the US, disputes go to individual arbitration unless you opt out (section 19.3).</p>
+<p>This summary helps you read the Terms. It doesn't replace them.</p>
+<hr />
+<h2 id="s-1">1. Who we are</h2>
+<div class="table-wrap"><table class="legal-table kv-table">
+<tbody>
+<tr><th scope="row">Company</th><td>Rare Reservations S.L.</td></tr>
+<tr><th scope="row">Tax ID (NIF)</th><td>B93948263</td></tr>
+<tr><th scope="row">Registered address</th><td>Av. Diagonal, 534, entr. Izq., 08006 Barcelona, Spain</td></tr>
+<tr><th scope="row">Commercial registry</th><td>Registro Mercantil de Barcelona, Hoja B-662569 (Inscripción 1ª, Asiento 1/2026/60816)</td></tr>
+<tr><th scope="row">Email</th><td><a href="mailto:support@rarereservations.com">support@rarereservations.com</a></td></tr>
+</tbody></table></div>
+<p>We reply to emails within 2 business days.</p>
+<h2 id="s-2">2. Accepting these Terms</h2>
+<h3 id="s-2-1">2.1 How you accept them</h3>
+<p>You accept these Terms when you create an account by tapping a button next to a notice that links to them, such as "Get table alerts", "Continue with Google", "Continue with Apple" or "Email me a code". You also accept them when you buy a plan. If you don't agree, don't use the Service. We record which version of the Terms you accepted, how and when.</p>
+<p>You can browse public pages, such as restaurant, city and blog pages, without an account. Sections 10, 11 and 15 to 20 apply to that browsing too.</p>
+<h3 id="s-2-2">2.2 Who can use the Service</h3>
+<p>You must be at least 18 years old and able to enter into a binding contract. If we learn that an account belongs to someone under 18, we'll close it and refund any unused paid plan.</p>
+<h3 id="s-2-3">2.3 Consumers and Business Users</h3>
+<p>You're a <strong>consumer</strong> if you use the Service mainly for purposes outside your trade, business or profession, for example to book your own anniversary dinner.</p>
+<p>You're a <strong>Business User</strong> if you use the Service mainly for your trade, business or profession. That includes buying a plan as or for a company, or using it to book tables for your employer or your clients, as an executive assistant, concierge or travel agent might. Giving a business tax ID at checkout also makes you a Business User.</p>
+<p>Some sections apply only to consumers, and some only to Business Users. They say so. If you accept these Terms for a company, you confirm you're authorized to bind it, and "you" includes that company.</p>
+<h2 id="s-3">3. What the Service is, and what it isn't</h2>
+<h3 id="s-3-1">3.1 What we do</h3>
+<p>We monitor the public availability of restaurants that use online booking platforms such as SevenRooms ("Booking Platforms"). We also learn when restaurants release new tables. When a table appears that matches one of your watches, we send you an alert with a link to the restaurant's own booking page, with your date and party size filled in.</p>
+<p>In these Terms:</p>
+<ul>
+<li>A <strong>watch</strong> is one request: one restaurant, one party size, a set of dates and an acceptable time window.</li>
+<li>A <strong>Matching Table</strong> is a bookable time we detect that falls on one of a watch's dates and inside its time window, for its party size.</li>
+<li>An <strong>alert</strong> is the message we send about a Matching Table by email, push notification, WhatsApp or text message (SMS), or any channel we add later.</li>
+</ul>
+<h3 id="s-3-2">3.2 What we don't do</h3>
+<ul>
+<li><strong>We don't book for you.</strong> You book directly with the restaurant on the Booking Platform, under that platform's and that restaurant's terms. Deposits, prepayments, cancellation fees, no-show fees, dress codes and age rules are between you and the restaurant.</li>
+<li><strong>We don't log in to Booking Platforms or hold your platform credentials.</strong> We never ask for them.</li>
+<li><strong>We're independent.</strong> We aren't affiliated with, endorsed by or paid by any restaurant or Booking Platform. Restaurant and platform names are used only to identify them.</li>
+<li><strong>We don't guarantee a table.</strong> Popular tables can be gone within seconds, sometimes before an alert reaches you or before you finish booking. Restaurants and Booking Platforms can change availability, rules or pages at any time, show some tables only to certain customers, or stop us from reading their availability.</li>
+<li><strong>We don't guarantee delivery times.</strong> Speed estimates such as "usually within seconds" describe typical past performance, not a promise. Email providers, mobile carriers, WhatsApp, browser push services and your device affect delivery.</li>
+</ul>
+<h3 id="s-3-3">3.3 Information on our pages</h3>
+<p>Restaurant pages show release rules, cancellation policies, typical prices, opening hours, awards and similar facts. We source and date them, and some come from our own monitoring ("proprietary data"). They're our best information at the date shown, not a statement by the restaurant. Release times we learned from our own checks are estimates. Always confirm the restaurant's own terms before you book. To report an error, use the "Report an error" link on the page or email <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>.</p>
+<h2 id="s-4">4. Your account</h2>
+<h3 id="s-4-1">4.1 Signing in</h3>
+<p>You sign in with Google, with Apple or with a code we email you. You don't create a password with us. When you use Google or Apple, their own terms also apply (section 12).</p>
+<h3 id="s-4-2">4.2 Keep your account accurate and secure</h3>
+<ul>
+<li>Use an email address and phone number you control, and keep them current. In the MVP, email changes go through support (section 4.4).</li>
+<li>Keep access to your email and devices secure. You're responsible for activity on your account unless it results from our failure to protect it.</li>
+<li>Tell us at once at <a href="mailto:support@rarereservations.com">support@rarereservations.com</a> if you think someone else has accessed your account.</li>
+</ul>
+<h3 id="s-4-3">4.3 One free account per person</h3>
+<p>You may hold only one free account. Creating extra free accounts, including with relay or alias addresses, to get around the free plan's limits is a breach of these Terms (section 14).</p>
+<h3 id="s-4-4">4.4 Email changes and account deletion</h3>
+<p>To change your email, write to <a href="mailto:support@rarereservations.com">support@rarereservations.com</a> from your current account address. To delete your account, write to the same address, or use "Delete account" in Settings when it's available. Deleting your account ends any active watches, and cancels any Membership at the end of its billing period. Deletion doesn't by itself refund a paid plan. Your rights to withdraw (section 9.3) and other refund rights aren't affected. Reservations you've already made with restaurants aren't affected.</p>
+<h2 id="s-5">5. Plans</h2>
+<h3 id="s-5-1">5.1 Current plans</h3>
+<p>Our plans, their prices in your currency, and their limits are shown on our pricing page and in the plan chooser at the time you buy. Those details form part of these Terms. On the effective date the plans are:</p>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th></th><th>Free</th><th>Pass</th><th>Membership</th></tr></thead>
+<tbody>
+<tr><td>Price</td><td>Free</td><td>One-time payment</td><td>Annual or monthly subscription</td></tr>
+<tr><td>Active watches at the same time</td><td>1</td><td>Up to 5 restaurants</td><td>Up to 10</td></tr>
+<tr><td>Dates</td><td>Any</td><td>All watched dates within 14 consecutive days, first to last date inclusive</td><td>Any, while you're a member</td></tr>
+<tr><td>Alert timing</td><td>2 minutes after paid plans (section 5.2)</td><td>Immediate</td><td>Immediate</td></tr>
+<tr><td>Channels</td><td>Email, push notifications</td><td>Email, push notifications, and WhatsApp or text message (SMS)</td><td>Same as Pass</td></tr>
+<tr><td>Renewal</td><td>—</td><td>Never renews</td><td>Renews automatically until you cancel (section 8)</td></tr>
+<tr><td>Pass Guarantee</td><td>—</td><td>Yes (section 9.1)</td><td>—</td></tr>
+</tbody></table></div>
+<p>A watch counts against your limit while it's active or paused. Backup restaurants are ordinary watches and count too.</p>
+<h3 id="s-5-2">5.2 The free plan</h3>
+<p>On the free plan, alerts are sent 2 minutes after alerts to paid plans for the same table. Just before sending, we check again whether the table is still available. If it is, you get a normal alert. If it's gone, we may send you a message saying you missed it and offering an upgrade. We send at most one of these per watch per day.</p>
+<p>We may change or end the free plan, or its limits, with notice under section 13.</p>
+<h3 id="s-5-3">5.3 Upgrading</h3>
+<p>An upgrade takes effect as soon as we confirm your payment. If you upgrade from Pass to an annual Membership, we credit the Pass price as shown at checkout, and the Pass and its Pass Guarantee end.</p>
+<h3 id="s-5-4">5.4 Fair use</h3>
+<p>To keep messaging reliable and affordable, these limits apply:</p>
+<ul>
+<li>No more than 10 WhatsApp or text message (SMS) alerts per user per day, or the higher limit shown for your plan. Further alerts that day go to your other channels and appear in your dashboard.</li>
+<li>Several tables found in one check for the same watch may be combined into one message.</li>
+</ul>
+<p>We may adjust these limits for new plans, or with notice under section 13.</p>
+<h3 id="s-5-5">5.5 Pro and business plans</h3>
+<p><strong>Pro.</strong> Pro is a plan for Business Users who book tables for others. It includes the higher watch limit, client profiles and priority email support described on the pricing page. Pro is for Business Users only, and the business-only sections of these Terms apply to it.</p>
+<p><strong>Client data.</strong> When you add information about your clients to client profiles, such as their names and dining preferences, you control that information and we process it on your behalf. Our Data Processing Addendum applies and forms part of these Terms. You confirm you have a lawful basis to give us that information and that you've told your clients about it.</p>
+<p><strong>Seats.</strong> A Pro plan is for the named user who holds it, unless your plan says it covers more users.</p>
+<p>Until Pro launches, you can join the Pro waitlist. Joining is free, creates no contract to buy, and doesn't sign you up for marketing email.</p>
+<h3 id="s-5-6">5.6 Gift Passes and promotional passes</h3>
+<p><strong>Gift and promotional passes.</strong> A Gift Pass is a code that the recipient redeems for a Pass on their own account. These rules apply:</p>
+<ul>
+<li>The buyer pays; the recipient accepts these Terms when redeeming.</li>
+<li>A Gift Pass can be redeemed until the expiry date shown on it, which is never less than 5 years from purchase, or longer where the law requires.</li>
+<li>It can't be exchanged for cash except where the law requires.</li>
+<li>The Pass Guarantee is paid to the person who paid.</li>
+<li>For an EU, UK or Swiss consumer buyer, the 14-day withdrawal period for the gift starts on purchase and ends at redemption, if redemption is sooner.</li>
+</ul>
+<p>Promotional or companion passes we give for free have no cash value and can't be transferred unless we say otherwise.</p>
+<h3 id="s-5-7">5.7 API, integrations and AI agents</h3>
+<p><strong>API access.</strong>Access to our API or MCP server is governed by separate API Terms, which we'll present when you request access. Those terms win over these Terms for API use where they conflict.</p>
+<h2 id="s-6">6. Alerts and messaging channels</h2>
+<h3 id="s-6-1">6.1 Choosing channels</h3>
+<p>You choose which channels get your alerts in Settings. At least one working channel must stay on while you have an active watch. We send some messages to your email whatever your settings, because they're needed to run your account: sign-in codes, receipts, payment problems, security notices and legally required notices.</p>
+<h3 id="s-6-2">6.2 Text message (SMS) alerts</h3>
+<p>This section is the program description for our SMS alerts. Its wording also meets the US carrier rules for SMS alerts.</p>
+<ul>
+<li><strong>Program.</strong> Rare Reservations table alerts. On a paid plan, when you tap "Text me" (or "Switch to text messages (SMS)") next to this program's disclosure and verify your number, you agree to receive automated text messages with booking links for tables that match your watches, and phone verification codes.</li>
+<li><strong>Frequency.</strong> It varies with availability. We send no more than 10 alerts a day, plus verification codes you request.</li>
+<li><strong>Cost.</strong> Message and data rates may apply. We don't charge you per message.</li>
+<li><strong>Opt out.</strong> Reply <strong>STOP</strong> to stop all text messages. We'll confirm by text, then send no more unless you reply <strong>START</strong>. Local equivalents of STOP and START work too. You can also turn text messages off in Settings.</li>
+<li><strong>Help.</strong> Reply <strong>HELP</strong>, or email <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>.</li>
+<li><strong>Carriers</strong> aren't liable for delayed or undelivered messages.</li>
+<li><strong>Privacy.</strong> We don't sell your number or use it for marketing. See our <a href="privacy-policy.html">Privacy Policy</a>, section 7.4.</li>
+<li><strong>Your number.</strong> You confirm that the number is yours, or that you're its regular authorized user. If you give up, transfer or change the number, remove it in Settings first.</li>
+</ul>
+<p>Text messages are available only in the countries we list in the phone setup screen, and only on paid plans.</p>
+<h3 id="s-6-3">6.3 WhatsApp alerts</h3>
+<p>WhatsApp alerts are sent through the WhatsApp Business Platform. You verify your number by sending us a WhatsApp message. Your use of WhatsApp is subject to WhatsApp's own terms and privacy policy. To stop WhatsApp alerts:</p>
+<ul>
+<li>tap "Stop this watch" on an alert, which stops that watch</li>
+<li>block our number in WhatsApp, which stops all WhatsApp alerts</li>
+<li>turn WhatsApp off in Settings</li>
+</ul>
+<p>WhatsApp isn't available in every country.</p>
+<h3 id="s-6-4">6.4 Push notifications</h3>
+<p>Push notifications are sent through your browser maker's push service, such as Apple, Google or Mozilla. On iPhone they need the site added to your Home Screen. You can turn them off per device in Settings or in your browser.</p>
+<h3 id="s-6-5">6.5 Email</h3>
+<p>Alert and account emails come from mail.rarereservations.com. Tips and, only if you opted in, offers come from tips.rarereservations.com. You can unsubscribe from tips and offers at any time with the link in each email. Section 6.1 explains which emails you can't turn off.</p>
+<h3 id="s-6-6">6.6 When we pause a channel</h3>
+<p>We may pause a channel for your account, and tell you why in Settings, when:</p>
+<ul>
+<li>you reply STOP or block our WhatsApp number</li>
+<li>your email bounces, or messages fail 3 times in a row</li>
+<li>your push subscription expires</li>
+<li>your plan no longer includes the channel</li>
+</ul>
+<p>We may also turn a channel off for everyone, or for a country, when a provider or a law requires it. Alerts then go to your other channels.</p>
+<h2 id="s-7">7. Prices and payment</h2>
+<h3 id="s-7-1">7.1 Prices</h3>
+<p>Prices are shown in US dollars, euros, pounds sterling or other currencies, based on your location. You can switch the currency in the plan chooser. A Membership keeps the currency it started in.</p>
+<p><strong>Prices include all taxes we charge.</strong> For EU and UK consumers, the price includes VAT at the rate of the country where you live. In other countries, any tax shown at checkout is included in the price. Your bank may charge currency conversion or foreign transaction fees; those aren't ours.</p>
+<h3 id="s-7-2">7.2 Payment</h3>
+<p>Payments are processed by Stripe. We never see or store your full card number. Business Users can enter a tax ID at checkout to get an invoice. EU businesses outside Spain with a valid VAT number are invoiced under the reverse-charge rule; the price charged doesn't change.</p>
+<h3 id="s-7-3">7.3 Your contract starts</h3>
+<p>Your contract for a paid plan starts when we confirm your payment. We email you a confirmation, including these Terms or a link to the version you accepted.</p>
+<h3 id="s-7-4">7.4 Promotion codes</h3>
+<p>Promotion codes are valid only as stated when issued. They can't be exchanged for cash, can't be combined unless we say so, and may be limited to one per customer. We may cancel a code that was obtained or used against its conditions.</p>
+<h3 id="s-7-5">7.5 Price tests</h3>
+<p>We sometimes test different prices with different visitors to find the right price. Assignment is random. We don't set prices based on a profile of you, and every visitor in the EEA in the same test gets the same euro price wherever they live. The price shown when you buy is the price you pay, and it stays your price for that purchase and, for a Membership, until a price change under section 8.3.</p>
+<h3 id="s-7-6">7.6 Failed payments</h3>
+<p>If a Membership payment fails, we'll retry it for up to 14 days and keep your alerts running meanwhile. If it still fails, your account moves to the free plan. We keep one watch: the one you chose, or else your earliest-created watch.</p>
+<h2 id="s-8">8. Membership renewal, price changes, pause and cancellation</h2>
+<h3 id="s-8-1">8.1 Automatic renewal</h3>
+<p><strong>A Membership renews automatically at the end of each billing period, monthly or annual, and we charge your payment method the renewal price, until you cancel.</strong> You agree to this when you tick the box at checkout that states the renewal price and interval. The renewal price is the price you agreed to, unless we change it under section 8.3.</p>
+<h3 id="s-8-2">8.2 Renewal reminders</h3>
+<ul>
+<li><strong>Annual Membership:</strong> we email you about 30 days before each renewal, or at the time your local law requires, with the date, the price and how to cancel.</li>
+<li><strong>Monthly Membership:</strong> we email you a reminder at least once a year, or more often where your local law requires, with the same details.</li>
+</ul>
+<h3 id="s-8-3">8.3 Price changes</h3>
+<p>We may change Membership prices for future billing periods. We'll email you at least 30 days before the new price applies to you. If you don't want to pay it, cancel before the renewal date. EU, UK and Swiss consumers may also end the Membership straight away and get a pro-rata refund for the unused part of the current period.</p>
+<h3 id="s-8-4">8.4 Pause</h3>
+<p>If you don't need alerts for a while, for example because you're traveling, you can pause your Membership for 1, 2 or 3 months in Settings. During a pause we don't check availability or send alerts for your watches, and we don't charge you. <strong>You don't lose any of the time you paid for:</strong></p>
+<ul>
+<li><strong>Monthly Membership:</strong> you aren't charged during the pause, and monthly billing restarts automatically when it ends.</li>
+<li><strong>Annual Membership:</strong> your paid period is extended by the length of the pause. For example, if your Membership runs until March 1 and you pause it for October and November, it runs until May 1, and we don't charge the next year until then.</li>
+</ul>
+<p>Alerts restart automatically when the pause ends. Your watches, settings and verified number are kept throughout. Renewal reminders (section 8.2) follow the new renewal date.</p>
+<h3 id="s-8-5">8.5 Cancellation</h3>
+<p><strong>You can cancel anytime in Settings → Plan and receipts → Cancel membership.</strong> It takes one confirmation, and you don't have to accept any offer first. Cancellation takes effect at the end of the current billing period. Until then, your alerts continue. After it:</p>
+<ul>
+<li>your account moves to the free plan</li>
+<li>we keep one watch you choose, and end the others</li>
+<li>WhatsApp and text message (SMS) alerts stop</li>
+</ul>
+<p>Cancellation doesn't refund the current period, except as section 9 or the law provides.</p>
+<h2 id="s-9">9. Refunds</h2>
+<h3 id="s-9-1">9.1 Pass Guarantee</h3>
+<p><strong>If we find no Matching Table for any of a Pass's watches, we refund the Pass in full, automatically.</strong> The refund is issued within 24 hours after the last watch of the Pass ends, to the original payment method. No request is needed.</p>
+<p>How the guarantee works:</p>
+<ul>
+<li>"Find" means we detected a Matching Table and created an alert for it, even if you didn't receive it because you turned your channels off, your email bounced or you replied STOP. If an alert didn't reach you because of a fault on our side, we treat the table as not found and still refund.</li>
+<li>Watches you canceled early still count as part of the Pass, and so do watches that ended because a restaurant left our catalog.</li>
+<li>The guarantee doesn't apply to a Pass obtained with a 100% promotion code, or to a Pass you upgraded to a Membership.</li>
+<li>We can't guarantee you'll be able to book a table we find (section 3.2). Finding a Matching Table that was gone when you tried to book doesn't trigger the guarantee.</li>
+</ul>
+<p>Banks usually take 5 to 10 business days to show a refund.</p>
+<h3 id="s-9-2">9.2 Phone setup refund</h3>
+<p>If you bought a plan for WhatsApp or text message (SMS) alerts and we can't verify your number for either method, you can ask for a full refund within 14 days of purchase, using the "Request a refund" link on the setup screen.</p>
+<h3 id="s-9-3">9.3 Right of withdrawal: EU, UK and Swiss consumers</h3>
+<p><strong>If you're a consumer living in the European Union, the European Economic Area, the United Kingdom or Switzerland, you can withdraw from a paid plan within 14 days of the day you bought it, without giving a reason.</strong></p>
+<p><strong>How to withdraw.</strong> Use <strong>Withdraw from contract</strong> in Settings → Plan and receipts, or the link in your purchase confirmation email. You can also send us a clear statement, for example by email to <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>, or use the model form in Annex A. You don't have to use the form. It's enough that you send your notice before the 14 days end. We'll confirm your withdrawal by email without delay.</p>
+<p><strong>Starting at once.</strong> At checkout, you asked us to start your plan immediately, during the withdrawal period. Because you did:</p>
+<ul>
+<li><strong>If we haven't sent you any alert</strong> under that plan when you withdraw, we refund the full price. An alert counts as sent once a messaging provider has accepted it for delivery.</li>
+<li><strong>If we have</strong>, we refund the price minus a proportionate amount for the Service already provided: price × days elapsed since purchase ÷ days in the contract period. For a Membership, the contract period is the billing period. For a Pass, it runs from purchase to the end of the last watched date, so if you withdraw after that date, the Pass has been provided in full and the proportionate amount is the whole price.</li>
+</ul>
+<p><strong>Refund timing.</strong> We refund within 14 days of receiving your notice, using the payment method you used, at no cost to you.</p>
+<p>This right doesn't apply to Business Users. If you're a consumer elsewhere and your local law gives you a similar right, you have it too.</p>
+<h3 id="s-9-4">9.4 Other refunds</h3>
+<p>Except as this section or the law provides, payments aren't refundable. We may give refunds or credits at our discretion; doing so once doesn't oblige us to do it again.</p>
+<h3 id="s-9-5">9.5 Chargebacks</h3>
+<p>Please contact us before disputing a charge with your bank. We usually solve problems faster. If you start a chargeback for a charge you authorized, we may suspend paid features while the dispute is open. That doesn't limit your legal rights.</p>
+<h2 id="s-10">10. Acceptable use</h2>
+<h3 id="s-10-1">10.1 Don't</h3>
+<p>You may not:</p>
+<ol>
+<li><strong>Resell.</strong> Sell, auction, trade or otherwise transfer for payment any reservation obtained through our alerts, or the alerts themselves. Booking tables for your employer, your clients or your hotel's guests as part of ordinary assistant, concierge or travel-agent work is allowed; charging a fee for the reservation itself isn't.</li>
+<li><strong>Feed bots.</strong> Connect our alerts to software that books tables automatically, except Authorized Integrations (section 10.2).</li>
+<li><strong>Automate our account features.</strong> Access account areas, the watch and alert features, our API or alert links with bots, scripts or scrapers. Public pages can be crawled in line with our robots.txt.</li>
+<li><strong>Compete with our data.</strong> Copy, extract or reuse our restaurant data, learned release times or availability data in bulk to build or train a competing alert, monitoring or booking service.</li>
+<li><strong>Abuse limits.</strong> Get around plan limits, fair-use caps, rate limits or bot checks, including by creating multiple free accounts (section 4.3).</li>
+<li><strong>Break things.</strong> Interfere with, overload or probe the Service, or test its vulnerabilities, except through a disclosure program we publish.</li>
+<li><strong>Misuse messaging.</strong> Register a phone number or email address that isn't yours, or use the Service to send messages to other people.</li>
+<li><strong>Break the law or others' terms.</strong> Use the Service to break any law, or a restaurant's or Booking Platform's booking rules, such as false names or party sizes. This includes infringing anyone's rights.</li>
+</ol>
+<h3 id="s-10-2">10.2 Authorized Integrations</h3>
+<p>From time to time we may let you connect the Service to third-party tools, such as an AI assistant that receives your alerts or acts on them for you ("Authorized Integrations"). We'll list them in the Service. You choose whether to connect one. The integration acts for you, under its own terms. We're not responsible for what it does with your alerts.</p>
+<h3 id="s-10-3">10.3 Security research</h3>
+<p>If you find a security issue, email <a href="mailto:security@rarereservations.com">security@rarereservations.com</a>. Please don't access other users' data, disrupt the Service, or publish the issue until we've had a reasonable time to fix it.</p>
+<h2 id="s-11">11. Our content and your content</h2>
+<h3 id="s-11-1">11.1 Our content</h3>
+<p>We or our licensors own the Service, the site's text, design and software, our restaurant database, learned release times and availability data. We give you a personal, non-exclusive, non-transferable, revocable license to use the Service under these Terms. Nothing else is licensed to you.</p>
+<h3 id="s-11-2">11.2 Your content and feedback</h3>
+<p>You keep what you give us: your watch details, survey answers and messages. You give us the rights we need to run the Service with them. You can also send us ideas and feedback. We may use them freely, without paying or crediting you.</p>
+<h3 id="s-11-3">11.3 How our pages are written</h3>
+<p>Restaurant pages and articles are drafted with the help of AI tools from our data and published sources. A named person reviews every page before it's published and is responsible for it. Our editorial and corrections policy is on our About page.</p>
+<h3 id="s-11-4">11.4 Trademarks</h3>
+<p>Rare Reservations and our logo are our trademarks. Restaurant names, Booking Platform names, the Michelin name and other third-party marks belong to their owners. We use them only to identify them.</p>
+<h2 id="s-12">12. Third-party services</h2>
+<p>The Service relies on others, such as Booking Platforms, restaurants, Google and Apple sign-in, WhatsApp, mobile carriers, browser push services, Stripe and Quaderno. Their terms and privacy policies govern your use of them. We aren't responsible for their services, availability or acts, except where we have chosen them to act on our behalf, as with our processors. Booking Platforms and restaurants may change or end the access we rely on at any time; if that makes a restaurant unavailable, we'll say so on its page and end the affected watches.</p>
+<p>If we ever offer an app through an app store, the store's required terms apply to the app too.</p>
+<h2 id="s-13">13. Changes</h2>
+<h3 id="s-13-1">13.1 Changes to the Service</h3>
+<p>We improve the Service constantly. We may add, change or remove features, restaurants, cities, Booking Platforms or channels. If a change materially reduces what a paid plan you've bought includes, we'll tell you in advance where we can. You may then cancel and get a pro-rata refund for the unused part. For a consumer in the EU, the UK or Switzerland, we'll only make such a change for a valid reason, such as a legal requirement, a provider or Booking Platform ending access, or security.</p>
+<p>Restaurants are added to and removed from our catalog over time. A restaurant leaving the catalog isn't a material reduction for this purpose, but if it ends your watch on a Pass, that watch still counts for the Pass Guarantee.</p>
+<h3 id="s-13-2">13.2 Changes to these Terms</h3>
+<p>We may update these Terms for legal, regulatory, security or business reasons. For material changes, we'll email you at least 30 days before they take effect, unless a law or a security risk requires a faster change. The email will say what's changing. If you keep using the Service after the effective date, the new Terms apply. If you don't agree, you can stop using the Service and cancel. If you cancel a Membership because of a change you don't accept, we'll refund the unused part of the current period. Changes don't apply to disputes that started before the change.</p>
+<h2 id="s-14">14. Suspension and termination</h2>
+<h3 id="s-14-1">14.1 By you</h3>
+<p>You can stop using the Service at any time, cancel a Membership (section 8.5) or delete your account (section 4.4).</p>
+<h3 id="s-14-2">14.2 By us</h3>
+<p>We may suspend or close your account, or end a watch, if:</p>
+<ul>
+<li>you seriously or repeatedly breach these Terms</li>
+<li>we must, by law or by order of an authority</li>
+<li>your use creates a risk for the Service, other users, restaurants or Booking Platforms</li>
+<li>your free account has been inactive under the retention rules in our Privacy Policy</li>
+</ul>
+<p>We'll tell you why and, where it's reasonable, give you a chance to fix the problem first. If we close a paid account without your breach, we'll refund the unused part of your plan.</p>
+<h3 id="s-14-3">14.3 What survives</h3>
+<p>Sections that by their nature should survive termination still apply, including sections 9, 11, 15 to 20 and any accrued payment obligations.</p>
+<h2 id="s-15">15. Disclaimers</h2>
+<p>The Service depends on information from restaurants and Booking Platforms that we don't control. <strong>To the fullest extent the law allows, the Service is provided "as is" and "as available".</strong> We don't promise that:</p>
+<ul>
+<li>the Service will be uninterrupted or error-free</li>
+<li>it will detect every table</li>
+<li>any alert will arrive in time</li>
+<li>any table will still be available when you try to book it</li>
+<li>information on our pages is complete or current</li>
+</ul>
+<p>We disclaim implied warranties of merchantability, fitness for a particular purpose and non-infringement, where the law allows us to.</p>
+<p><strong>This section doesn't limit rights you have as a consumer that can't be excluded by contract.</strong> These include the EU legal guarantee of conformity for digital services, the UK Consumer Rights Act 2015 and the Australian Consumer Law (section 21).</p>
+<h2 id="s-16">16. Liability</h2>
+<h3 id="s-16-1">16.1 What we're always liable for</h3>
+<p>Nothing in these Terms limits or excludes liability for:</p>
+<ul>
+<li>death or personal injury caused by negligence</li>
+<li>fraud or fraudulent misrepresentation</li>
+<li>intentional misconduct or gross negligence</li>
+<li>anything else that can't be limited or excluded by law</li>
+</ul>
+<h3 id="s-16-2">16.2 For everyone</h3>
+<p>Subject to section 16.1, and to the fullest extent the law allows:</p>
+<ul>
+<li><strong>We're not liable for losses caused by restaurants, Booking Platforms or other third parties</strong>, including tables they withdraw, deposits or fees they charge, or reservations they cancel.</li>
+<li><strong>We're not liable for a missed table or a missed occasion</strong>, including travel costs, that didn't result from our breach of these Terms.</li>
+<li><strong>Our total liability</strong> arising out of or relating to the Service in any 12-month period is limited to the greater of (a) the amounts you paid us in the 12 months before the event giving rise to the claim, and (b) EUR 100, or USD 100 or GBP 100 if you pay in those currencies.</li>
+</ul>
+<h3 id="s-16-3">16.3 For Business Users only</h3>
+<p>Subject to section 16.1, we aren't liable to Business Users for any indirect or consequential loss, or for loss of profit, revenue, business, goodwill, clients or anticipated savings, however caused.</p>
+<h3 id="s-16-4">16.4 For EU and UK consumers</h3>
+<p>Section 16.2 doesn't apply to you where your local law doesn't allow it. We're responsible for loss you suffer that is a foreseeable result of our breach of these Terms or our failure to use reasonable care and skill. Loss is foreseeable if it's obvious it will happen, or if both of us knew it might happen when you accepted these Terms. We aren't responsible for loss that isn't foreseeable. We provide the Service for your personal use, so we aren't liable for business losses.</p>
+<h2 id="s-17">17. Indemnity (Business Users only)</h2>
+<p>If you're a Business User, you'll defend and indemnify us against third-party claims arising from your breach of these Terms or of the law. That includes claims from clients or other people whose information you gave us, or who you booked for. We'll tell you promptly about any such claim and let you control the defense, as long as no settlement admits fault for us or imposes obligations on us without our consent.</p>
+<h2 id="s-18">18. Complaints</h2>
+<p>If something goes wrong, email <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>. We reply within 2 business days and aim to resolve complaints within 30 days. We'll confirm in writing what we decided.</p>
+<p>We aren't bound to use an alternative dispute resolution body. If we can't solve a complaint, we'll tell you in our reply whether we agree to refer it to one.</p>
+<p>In compliance with Decree 121/2013, official complaint/claim forms are available to users. They may be downloaded from <a href="https://aplicacio.consum.gencat.cat/doc/doc_59629304_1.pdf" rel="nofollow">Agència Catalana del Consum</a>.</p>
+<h2 id="s-19">19. Governing law and disputes</h2>
+<h3 id="s-19-1">19.1 Everyone, unless 19.2 or 19.3 says otherwise</h3>
+<p>These Terms and any dispute about them, including non-contractual disputes, are governed by <strong>Spanish law</strong>. The courts of <strong>Barcelona, Spain</strong> have exclusive jurisdiction.</p>
+<h3 id="s-19-2">19.2 Consumers in the EU, the EEA, the UK, Switzerland and elsewhere</h3>
+<p>If you're a consumer, choosing Spanish law doesn't take away the protection of the mandatory laws of the country where you live. You may bring proceedings in the courts of the country where you live or in Barcelona. We may bring proceedings against you only in the courts of the country where you live. If you live in Scotland or Northern Ireland, you can bring proceedings there.</p>
+<h3 id="s-19-3">19.3 United States: individual arbitration and class-action waiver</h3>
+<p><strong>Please read this section carefully. It affects your rights. You can opt out within 30 days (section 19.3.7).</strong> It applies if you live in the United States.</p>
+<ol>
+<li><strong>Talk to us first.</strong> Before starting arbitration or a small-claims case, send a written notice describing your claim and the relief you want to <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>, with the subject "Notice of dispute". Include your name and account email. We'll do the same, to your account email. We both agree to try in good faith to resolve the dispute for 60 days. Time limits for claims are paused during those 60 days.</li>
+<li><strong>Arbitration.</strong> If we don't resolve it, any dispute arising out of or relating to these Terms or the Service will be resolved by <strong>binding individual arbitration</strong>. The American Arbitration Association (AAA) administers it under its Consumer Arbitration Rules. The Federal Arbitration Act governs this section 19.3. The arbitrator decides any question about whether a dispute must be arbitrated, except section 19.3.4 and section 19.3.5, which a court decides.</li>
+<li><strong>Exceptions.</strong> Either of us may instead bring an individual claim in small-claims court, or ask a court for an injunction against infringement of intellectual property or misuse of the Service.</li>
+<li><strong>No class actions.</strong> Claims may be brought only individually, not as a plaintiff or class member in any class, collective, consolidated or representative proceeding. The arbitrator may not consolidate claims or award relief to anyone but the individual claimant. If this subsection is found unenforceable for a claim, that claim goes to court, not arbitration.</li>
+<li><strong>Mass arbitration.</strong> If 25 or more similar demands are filed by or with the help of the same law firm or coordinated group, they're administered in batches of up to 50, with one arbitrator per batch where the AAA rules allow. Fees for each batch are assessed as for one case. Limitation periods are paused for demands waiting for their batch. A court can resolve disputes about this subsection.</li>
+<li><strong>Costs and place.</strong> We pay all AAA filing, administration and arbitrator fees beyond the amount you'd pay to file in court, unless the arbitrator finds your claim frivolous. The arbitration takes place by video, by phone or on documents, or in person in the county where you live, as you choose. The arbitrator can award the same individual relief a court could.</li>
+<li><strong>Opting out.</strong> You can opt out of this section 19.3 by emailing <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>, with the subject "Arbitration opt-out", within 30 days of first accepting these Terms. If you opt out, section 19.1 applies, except that you can bring claims in the state or federal courts where you live.</li>
+<li><strong>Changes.</strong> If we change this section 19.3, you may reject the change by emailing us within 30 days of it; the previous version then continues to apply to you.</li>
+</ol>
+<h2 id="s-20">20. General</h2>
+<ol>
+<li><strong>Entire agreement.</strong> These Terms, the plan details shown when you buy and any additional terms we present for a feature are the whole agreement between us about the Service. Our Privacy Policy explains how we handle personal data; it's information for you, not part of this contract.</li>
+<li><strong>Transfer.</strong> We may transfer this contract to a company that takes over the Service, as long as your rights under it aren't reduced. We'll tell you if we do. You may not transfer it without our consent.</li>
+<li><strong>Severability.</strong> If a court finds any part of these Terms invalid, the rest stays in force.</li>
+<li><strong>Language.</strong> These Terms are written in English. We may provide translations. The English version governs, except where the law where you live requires the translated version to govern. Spanish and Catalan versions are available on request.</li>
+<li><strong>No waiver.</strong> If we don't enforce a right straight away, we can still enforce it later.</li>
+<li><strong>Notices.</strong> We send notices to your account email. Please send notices to <a href="mailto:support@rarereservations.com">support@rarereservations.com</a>.</li>
+<li><strong>Force majeure.</strong> Neither of us is liable for failing to perform because of events outside our reasonable control. For example, a Booking Platform blocking access, provider outages, natural disasters, war or government action. This doesn't affect section 9 refunds.</li>
+<li><strong>No third-party rights.</strong> Nobody else can enforce these Terms, except as section 5.5 provides for Pro clients' data protection rights.</li>
+</ol>
+<h2 id="s-21">21. Regional terms</h2>
+<p>These sections apply in addition to the rest of these Terms if you live in the place named, based on your billing country, or else your account country. Where they conflict with the rest of these Terms, they win.</p>
+<h3 id="s-21-1">21.1 European Union and European Economic Area (consumers)</h3>
+<ul>
+<li><strong>Legal guarantee.</strong> You have a legal guarantee that the Service conforms to the contract and to the objective requirements of the law. That gives you remedies: having it brought into conformity, a price reduction or termination. Spain implements this in the Consumer and User Protection Act (TRLGDCU, arts. 114 and following). Nothing in sections 15 or 16 limits it.</li>
+<li><strong>Withdrawal.</strong> Section 9.3 applies.</li>
+<li><strong>Cancellation button.</strong> If you live in Germany, the "Cancel membership" button in Settings is our cancellation button within the meaning of § 312k BGB.</li>
+</ul>
+<h3 id="s-21-2">21.2 United Kingdom (consumers)</h3>
+<ul>
+<li>You have statutory rights under the Consumer Rights Act 2015, including that the Service is provided with reasonable care and skill. Advice is available from Citizens Advice. Nothing in these Terms affects those rights.</li>
+<li>Section 9.3 applies under the Consumer Contracts Regulations 2013.</li>
+<li>When the UK subscription-contract rules of the Digital Markets, Competition and Consumers Act 2024 come into force, we'll follow them, including their reminder notices and renewal cooling-off periods. Where they give you more rights than these Terms, they apply.</li>
+</ul>
+<h3 id="s-21-3">21.3 Switzerland (consumers)</h3>
+<p>Section 9.3 applies to you voluntarily, as a right we give you. Swiss law doesn't require it.</p>
+<h3 id="s-21-4">21.4 United States</h3>
+<ul>
+<li><strong>Section 19.3</strong> (arbitration) applies.</li>
+<li><strong>California.</strong> The Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs can be contacted in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by phone at (800) 952-5210. Our cancellation and renewal terms are in section 8.</li>
+<li><strong>New Jersey.</strong> Nothing in sections 15 to 17 limits rights under the New Jersey Truth-in-Consumer Contract, Warranty and Notice Act that can't be limited. The limitations apply only as far as New Jersey law permits.</li>
+<li>Some states don't allow some disclaimers or limitations of liability; they apply to you only as far as your state allows.</li>
+</ul>
+<h3 id="s-21-5">21.5 Canada</h3>
+<p><strong>Quebec.</strong> If you live in Quebec, sections 16 and 17 don't apply to you to the extent the Quebec Consumer Protection Act prohibits them. Section 19.3 doesn't apply. You can bring claims in the courts of Quebec, and Quebec law protects you.</p>
+<h3 id="s-21-6">21.6 Australia and New Zealand</h3>
+<ul>
+<li><strong>Australia.</strong> Our services come with guarantees that can't be excluded under the Australian Consumer Law. For major failures with the service, you're entitled to cancel your service contract and get a refund for the unused portion, or compensation for its reduced value. You're also entitled to be compensated for any other reasonably foreseeable loss or damage. If the failure doesn't amount to a major failure, you're entitled to have problems with the service rectified in a reasonable time and, if this isn't done, to cancel your contract and get a refund for the unused portion. Nothing in these Terms excludes those rights.</li>
+<li><strong>New Zealand.</strong> If you acquire the Service as a consumer, the Consumer Guarantees Act 1993 applies, and nothing in these Terms limits it. If you're a Business User in New Zealand, the parties agree that the Act doesn't apply.</li>
+</ul>
+<h3 id="s-21-7">21.7 Japan</h3>
+<p>Nothing in these Terms limits rights you have under the Consumer Contract Act of Japan, including article 8 (exemption clauses) and article 10 (clauses that unilaterally harm consumers' interests). Disclaimers and limitations apply only as far as that Act permits.</p>
+<hr />
+<h2 id="s-a">Annex A: Model withdrawal form</h2>
+<p><em>(EU, EEA, UK and Swiss consumers. Fill in this form and send it only if you want to withdraw from the contract.)</em></p>
+<p>To: Rare Reservations S.L., Av. Diagonal, 534, entr. Izq., 08006 Barcelona, Spain · <a href="mailto:support@rarereservations.com">support@rarereservations.com</a></p>
+<p>I hereby give notice that I withdraw from my contract for the supply of the following service:</p>
+<ul>
+<li>Service: Rare Reservations [Pass / Membership]</li>
+<li>Ordered on: [date]</li>
+<li>Name of consumer: [name]</li>
+<li>Email address of the account: [email]</li>
+<li>Address of consumer: [address]</li>
+<li>Signature of consumer (only if this form is sent on paper): [signature]</li>
+<li>Date: [date]</li>
+</ul>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rare Reservations, S.L. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a> &bull;
+        <a href="aviso-legal.html">Aviso Legal</a> &bull;
+        <a href="terms-of-service.html">Terms of Service</a> &bull;
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

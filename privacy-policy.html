@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Rare Reservations</title>
+  <meta name="description" content="How Rare Reservations, S.L. collects, uses, shares and protects your personal data, and the rights you have." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    /* CSS Variables & Reset */
+    :root {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F4F4F4;
+      --text-primary: #1a1a1a;
+      --heading-color: #000000;
+      --accent-color: #c9261a;
+      --accent-hover: #a81e14;
+      --font-stack: Inter, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout Components */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand,
+    .nav-brand:hover,
+    .nav-brand:focus,
+    .nav-brand:active {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      text-decoration: none !important;
+    }
+
+    .brand-logo {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Content Area */
+    .legal-page {
+      padding: 60px 0 80px;
+    }
+
+    .legal-header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--heading-color);
+      padding-bottom: 24px;
+    }
+
+    .legal-header h1 {
+      font-size: 38px;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .legal-header p {
+      font-size: 15px;
+      color: #666666;
+    }
+
+    .legal-card {
+      background: var(--bg-secondary);
+      padding: 32px;
+      border-radius: 8px;
+      margin-bottom: 36px;
+      border: 1px solid #EAEAEA;
+    }
+
+    .legal-card h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .info-grid {
+        grid-template-columns: 200px 1fr;
+      }
+    }
+
+    .info-label {
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .info-value {
+      color: var(--text-primary);
+    }
+
+    .legal-section {
+      margin-bottom: 32px;
+    }
+
+    .legal-section h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      padding-top: 8px;
+    }
+
+    .legal-section p, .legal-section ul {
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul {
+      padding-left: 20px;
+    }
+
+    .legal-section li {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      background-color: var(--bg-primary);
+      border-top: 1px solid #E5E5E5;
+      font-size: 13px;
+      color: #777777;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .legal-page {
+        padding: 40px 0;
+      }
+      .legal-header h1 {
+        font-size: 28px;
+      }
+    }
+    /* Long-form legal documents */
+    .legal-doc {
+      max-width: 860px;
+    }
+
+    .legal-doc h2 {
+      font-size: 22px;
+      margin: 40px 0 12px;
+      scroll-margin-top: 16px;
+    }
+
+    .legal-doc h3 {
+      font-size: 17px;
+      margin: 24px 0 8px;
+      scroll-margin-top: 16px;
+    }
+
+    .legal-doc p, .legal-doc ul, .legal-doc ol {
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+
+    .legal-doc ul, .legal-doc ol {
+      padding-left: 22px;
+    }
+
+    .legal-doc li {
+      margin-bottom: 6px;
+    }
+
+    .legal-doc li > ul, .legal-doc li > p {
+      margin-top: 6px;
+    }
+
+    .legal-doc hr {
+      border: none;
+      border-top: 1px solid #E5E5E5;
+      margin: 48px 0 8px;
+    }
+
+    .legal-doc code {
+      font-size: 13px;
+      background: var(--bg-secondary);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 20px;
+      border: 1px solid #EAEAEA;
+      border-radius: 8px;
+    }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      color: #333333;
+    }
+
+    .legal-table th, .legal-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 14px;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    .legal-table tr:last-child th, .legal-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .legal-table thead th {
+      background: var(--bg-secondary);
+      color: var(--heading-color);
+    }
+
+    .kv-table th[scope="row"] {
+      width: 32%;
+      background: var(--bg-secondary);
+      color: var(--heading-color);
+    }
+
+    @media (max-width: 640px) {
+      .legal-table {
+        min-width: 560px;
+      }
+      .kv-table {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.svg" alt="Rare Reservations Logo" class="brand-logo" width="40" height="40" />
+        <span>Rare Reservations</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Legal Main Content -->
+  <main class="container legal-page legal-doc">
+    <div class="legal-header">
+      <h1>Privacy Policy</h1>
+      <p>Effective date: October 27, 2026</p>
+    </div>
+
+<p>This policy explains what personal data Rare Reservations collects, why, who we share it with, how long we keep it and what rights you have. It covers rarereservations.com, our alerts and emails, and our support (together, the "Service").</p>
+<h2 id="s-1">1. Who we are</h2>
+<p><strong>Rare Reservations S.L.</strong> is the controller of your personal data.</p>
+<div class="table-wrap"><table class="legal-table kv-table">
+<tbody>
+<tr><th scope="row">Address</th><td>Av. Diagonal, 534, entr. Izq., 08006 Barcelona, Spain</td></tr>
+<tr><th scope="row">Tax ID (NIF)</th><td>B93948263</td></tr>
+<tr><th scope="row">Privacy contact</th><td><a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a></td></tr>
+</tbody></table></div>
+<p>We haven't appointed a data protection officer because the law doesn't require one for us. Our privacy contact handles every privacy question and request.</p>
+<h2 id="s-2">2. Summary</h2>
+<div class="table-wrap"><table class="legal-table kv-table">
+<tbody>
+<tr><th scope="row"><strong>What we collect</strong></th><td>Your email, your watches (restaurant, dates, times, party size), your alert settings, and your phone number if you choose WhatsApp or text message (SMS). Billing country and postal code when you pay. Basic device and usage information.</td></tr>
+<tr><th scope="row"><strong>What we don't collect</strong></th><td>Passwords: we have none. Your full card number: Stripe handles it. Your booking-platform logins: we never ask for them.</td></tr>
+<tr><th scope="row"><strong>Why</strong></th><td>To send you table alerts, run your account, take payments, keep the Service secure and improve it.</td></tr>
+<tr><th scope="row"><strong>Who we share it with</strong></th><td>Service providers that run parts of the Service for us, such as hosting, email, messaging and payments, and no one else unless the law requires it. <strong>We don't sell your personal data</strong>, and we don't share it for advertising.</td></tr>
+<tr><th scope="row"><strong>Where it's stored</strong></th><td>On Amazon Web Services in the United States, with legal safeguards for transfers (section 8).</td></tr>
+<tr><th scope="row"><strong>Your choices</strong></th><td>Turn channels and email types on and off in Settings. Accept or refuse analytics cookies, and change your mind with Cookie settings. Ask for a copy of your data, or for us to correct or delete it, at <a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a>.</td></tr>
+</tbody></table></div>
+<h2 id="s-3">3. What we collect</h2>
+<h3 id="s-3-1">3.1 What you give us</h3>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Data</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>Email address</td><td>When you sign in with an email code, or the address Google or Apple shares with us. If you use Apple's "Hide My Email", we get a relay address, not your real one.</td></tr>
+<tr><td>Watches</td><td>Restaurant, dates, earliest and latest time, party size, and edits to them</td></tr>
+<tr><td>Phone number</td><td>Only on a paid plan, when you set up WhatsApp or text message (SMS) alerts. For WhatsApp, we take the number from the message you send us.</td></tr>
+<tr><td>Consent records</td><td>When you tap "Text me" for text messages (SMS), tick the offers box or turn on offers in Settings, or tick the auto-renewal or immediate-start box at checkout: what you agreed to, which version of the text, and when</td></tr>
+<tr><td>Billing details</td><td>Billing country and postal code, and an optional tax ID and company name, entered in Stripe Checkout</td></tr>
+<tr><td>Pro waitlist</td><td>Work email, optional name and company, role, how many people you book for, and optionally how many tables a month</td></tr>
+<tr><td>Answers and messages</td><td>Follow-up answers ("Yes, I booked it"), cancellation survey answers, emails to support, error reports, and WhatsApp or SMS replies such as STOP, HELP or "Stop this watch"</td></tr>
+</tbody></table></div>
+<h3 id="s-3-2">3.2 What we collect automatically</h3>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Data</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>Sign-in identifiers</td><td>The account ID that Google or Apple gives us (their "subject"), and the email at the time you linked it</td></tr>
+<tr><td>Sessions</td><td>A random session token, of which we store only a hash, a device label such as "iPhone, Safari", your browser's user agent, approximate country, and when the session was created and last used</td></tr>
+<tr><td>Push subscriptions</td><td>The address that your browser's push service gives us for your device, with its encryption keys and the device label</td></tr>
+<tr><td>Time zone and country</td><td>Your time zone, from your browser, to show release times in your time. Your country, from your IP address, to pick your currency and the phone country.</td></tr>
+<tr><td>Alert records</td><td>Which alerts we created for you, on which channels, whether each was delivered, and when you clicked an alert link. Clicking a link also triggers a check of whether the table was still available.</td></tr>
+<tr><td>Email delivery events</td><td>Whether an email was delivered, bounced or marked as spam. We don't track whether you opened an email.</td></tr>
+<tr><td>Account events</td><td>A log of changes to your account, such as email, phone, sign-in method, channel settings and unsubscribes, with masked old and new values</td></tr>
+<tr><td>Technical and security data</td><td>IP address, request logs, and bot checks (Cloudflare Turnstile), used for security, rate limits and fraud prevention</td></tr>
+<tr><td>Analytics</td><td>Pages you view, steps in sign-up and checkout, the device type, and where you came from, such as a referring site or campaign tag, linked by an identifier in a cookie. In the EEA, the UK and Canada, only if you accept analytics cookies. See section 4 and Annex B.</td></tr>
+<tr><td>On your device</td><td>While you fill in the watch form, your choices and the email you typed are saved in your browser, so a reload doesn't lose them. They're deleted after 24 hours or when the watch is created.</td></tr>
+</tbody></table></div>
+<h3 id="s-3-3">3.3 What we get from others</h3>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Source</th><th>What we get</th></tr></thead>
+<tbody>
+<tr><td>Google or Apple</td><td>When you sign in with them: an account identifier, your email, and whether it's verified. We ask Apple only for your email, and we don't ask Google for anything beyond basic sign-in.</td></tr>
+<tr><td>Stripe</td><td>Payment status, the last four digits, brand and country of your card, and billing country and postal code</td></tr>
+<tr><td>Quaderno</td><td>Receipt and invoice numbers and links, and the tax location we used</td></tr>
+<tr><td>Twilio and WhatsApp</td><td>Delivery status of messages, and your replies</td></tr>
+</tbody></table></div>
+<p>We don't buy personal data from data brokers.</p>
+<h3 id="s-3-4">3.4 What isn't about you</h3>
+<p>Most of our data isn't personal: restaurant availability checks, release times and cancellation patterns. When we use your watches and alerts to understand demand or improve our service, we work with aggregated or de-identified data wherever we can.</p>
+<h2 id="s-4">4. How we use your data</h2>
+<ol>
+<li><strong>To provide the Service:</strong> create and run your watches, find matching tables, send alerts on your channels, show your dashboard, and ask afterwards whether you got the table.</li>
+<li><strong>To run your account:</strong> sign-in, sessions on your devices, settings, plan limits, and support.</li>
+<li><strong>To take payments and meet tax rules:</strong> process payments, issue receipts and invoices, handle refunds, the Pass Guarantee and withdrawals, and keep tax records.</li>
+<li><strong>To send service and account messages:</strong> sign-in and verification codes, receipts, payment problems, renewal reminders, security notices, and changes to our terms.</li>
+<li><strong>To send useful tips</strong> about the Service you use, such as a release checklist before tables open, or how to set up push on iPhone. You can turn these off in Settings or with the link in each email.</li>
+<li><strong>To send offers and updates, only if you opted in.</strong> You can withdraw at any time.</li>
+<li><strong>To keep the Service secure:</strong> prevent fraud and abuse, enforce limits, detect bots, and investigate problems.</li>
+<li><strong>To understand and improve the Service:</strong> measure sign-up and checkout funnels, test prices and features, and measure how fast alerts arrive and how often they lead to a booking.</li>
+<li><strong>To meet legal obligations,</strong> and to establish, exercise or defend legal claims.</li>
+</ol>
+<h2 id="s-5">5. Legal bases (EEA, UK and Switzerland)</h2>
+<p>Under the GDPR and the UK GDPR, we rely on the following legal bases. In Switzerland, the same purposes are covered by the revised Federal Act on Data Protection (FADP).</p>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Purpose (section 4)</th><th>Data</th><th>Legal basis</th></tr></thead>
+<tbody>
+<tr><td>1, 2. Providing the Service and running your account</td><td>Account, watches, channels, sessions, push subscriptions, alert records, phone number</td><td><strong>Contract</strong> (art. 6(1)(b))</td></tr>
+<tr><td>3. Payments</td><td>Billing details, payment records</td><td><strong>Contract</strong>, and <strong>legal obligation</strong> for tax records (art. 6(1)(c); Spanish General Tax Law and Commercial Code)</td></tr>
+<tr><td>4. Service and account messages</td><td>Email, phone number</td><td><strong>Contract</strong>; <strong>legal obligation</strong> for some notices, such as withdrawal confirmations</td></tr>
+<tr><td>Sending text messages (SMS)</td><td>Phone number, SMS consent record</td><td><strong>Contract</strong>. We also record your consent, because telecoms rules in some countries, such as the US, require it.</td></tr>
+<tr><td>5. Useful tips</td><td>Email, watches</td><td><strong>Legitimate interests</strong> (art. 6(1)(f)): helping customers get the most from a service they use. You can object at any time by unsubscribing.</td></tr>
+<tr><td>6. Offers and updates</td><td>Email, marketing consent record</td><td><strong>Consent</strong> (art. 6(1)(a); Spanish LSSI-CE art. 21; UK PECR).</td></tr>
+<tr><td>7. Security and fraud prevention</td><td>IP address, logs, bot checks, account events</td><td><strong>Legitimate interests</strong>: protecting users, the Service and the restaurants and platforms we read from</td></tr>
+<tr><td>8. Analytics with cookies</td><td>Usage data, a cookie identifier</td><td><strong>Consent</strong> in the EEA, the UK and Canada (art. 6(1)(a); ePrivacy rules in LSSI-CE art. 22.2 and PECR). Elsewhere, <strong>legitimate interests</strong>: understanding how people use the site; you can refuse with Cookie settings or a Global Privacy Control signal.</td></tr>
+<tr><td>8. Analytics from our server records, after you sign in</td><td>Account identifier, sign-up and checkout steps, without your IP address</td><td><strong>Legitimate interests</strong>: measuring whether the Service works and sells. You can object (section 11).</td></tr>
+<tr><td>8. Analytics without cookies, from our own records</td><td>Alert, click and follow-up records, payment records</td><td><strong>Legitimate interests</strong>: understanding whether the Service works, using aggregated measures</td></tr>
+<tr><td>8. Price tests</td><td>Assignment to a test group when you create an account, purchase records</td><td><strong>Legitimate interests</strong>: setting fair prices. Assignment is random, and the prices you see are the prices you pay.</td></tr>
+<tr><td>9. Legal obligations and claims</td><td>Whatever is relevant</td><td><strong>Legal obligation</strong>; <strong>legitimate interests</strong> in defending claims</td></tr>
+</tbody></table></div>
+<p>Where we rely on legitimate interests, we've balanced them against your interests and rights. You can ask us for details, and you can object (section 11).</p>
+<p>If you don't give us your email, we can't create an account. If you don't give us a phone number, you can't get WhatsApp or text message (SMS) alerts, but everything else works.</p>
+<h2 id="s-6">6. Automated decisions and profiling</h2>
+<p>We don't make decisions about you based solely on automated processing that have legal or similarly significant effects on you.</p>
+<p>Some of our systems work automatically. Free accounts get alerts 2 minutes after paid accounts, and fair-use limits cap messages per day. Those are rules of your plan, applied the same way to everyone. Assignment to a price test is random and doesn't use a profile of you.</p>
+<h2 id="s-7">7. Who we share data with</h2>
+<h3 id="s-7-1">7.1 Service providers (processors)</h3>
+<p>These companies process personal data only on our instructions, under contracts that protect it.</p>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Provider</th><th>What they do</th><th>Data</th><th>Location</th></tr></thead>
+<tbody>
+<tr><td>Amazon Web Services</td><td>Hosting, database, email sending (Amazon SES), logs</td><td>All of the data in section 3</td><td>United States</td></tr>
+<tr><td>Twilio</td><td>Text messages and WhatsApp messages</td><td>Phone number, message content, delivery status</td><td>United States</td></tr>
+<tr><td>Stripe</td><td>Payments, subscriptions, customer portal</td><td>Email, billing details, payment data</td><td>United States, EU</td></tr>
+<tr><td>Quaderno</td><td>Tax calculation, receipts, invoices, tax reports</td><td>Email, name and tax ID if given, billing country and postal code, card country, amounts</td><td>EU</td></tr>
+<tr><td>PostHog</td><td>Product analytics</td><td>Usage data, an account identifier</td><td>EU</td></tr>
+<tr><td>Cloudflare</td><td>Bot checks (Turnstile) on sign-in</td><td>IP address, browser signals</td><td>Global network</td></tr>
+<tr><td>Google Workspace</td><td>Email support</td><td>Your emails to us</td><td>United States, EU</td></tr>
+</tbody></table></div>
+<p>Our requests to restaurants' booking pages go through providers of network addresses. Those requests contain no personal data about you, only the restaurant, date and party size.</p>
+<h3 id="s-7-2">7.2 Others that process data under their own responsibility</h3>
+<p>These parties act as independent controllers for some processing. Their own privacy policies apply:</p>
+<ul>
+<li><strong>Google and Apple</strong>, when you sign in with them</li>
+<li><strong>Meta (WhatsApp)</strong>, when you use WhatsApp alerts</li>
+<li><strong>Your browser's push service</strong>, such as Apple, Google or Mozilla, which delivers push notifications to your device</li>
+<li><strong>Stripe</strong>, for its own fraud prevention and legal compliance</li>
+<li><strong>Banks and card networks</strong>, for payments</li>
+<li><strong>Mobile carriers</strong>, for text messages (SMS)</li>
+</ul>
+<h3 id="s-7-3">7.3 Other sharing</h3>
+<p>We also share personal data:</p>
+<ul>
+<li>with authorities, courts or other parties when the law requires it, or to protect rights, safety or property</li>
+<li>with professional advisers, such as lawyers, accountants and auditors, under confidentiality</li>
+<li>if we're involved in a merger, acquisition or sale of assets, with the buyer, who must protect it as this policy says. We'll tell you before that happens.</li>
+<li>with integrations you choose to connect (section 13), only to the extent you authorize</li>
+</ul>
+<p>Restaurants and Booking Platforms don't receive your data from us. When you book, you give your details to them directly.</p>
+<h3 id="s-7-4">7.4 Mobile numbers and text messages (SMS)</h3>
+<p><strong>We don't share your mobile number, or your consent to receive text messages, with any third party or affiliate for its marketing or promotional purposes.</strong> We share your number only with the providers that deliver our messages (Twilio and, for WhatsApp, Meta), and only to deliver them. Text messaging opt-in data and consent aren't shared with any third party, except the providers that deliver our messages.</p>
+<h3 id="s-7-5">7.5 No sale, no targeted advertising</h3>
+<p>We don't sell personal data. We don't "share" it for cross-context behavioral advertising, as US state laws use that term. We don't put advertising trackers on our site. If that ever changes, we'll update this policy first and ask for consent where required.</p>
+<h2 id="s-8">8. International transfers</h2>
+<p>We're based in Spain, but our main systems run on Amazon Web Services in the United States, close to the booking platforms we monitor. Several of our providers are US companies. So your personal data is transferred to, and stored in, the United States.</p>
+<p>We protect those transfers by:</p>
+<ul>
+<li>relying on the <strong>EU-US Data Privacy Framework</strong>, its UK Extension and the Swiss-US Data Privacy Framework, for providers certified under them</li>
+<li>signing the European Commission's <strong>Standard Contractual Clauses</strong> with our providers, with the UK addendum and Swiss amendments, so transfers stay protected even if the Framework is withdrawn</li>
+<li>assessing the risks of the transfers, and using encryption in transit and at rest</li>
+</ul>
+<p>You can ask for a copy of the safeguards we use at <a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a>.</p>
+<h2 id="s-9">9. How long we keep data</h2>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Data</th><th>How long</th></tr></thead>
+<tbody>
+<tr><td>Account, watches and alert settings</td><td>While your account is open. If your account has had no sign-in, no active watch and no payment for <strong>24 months</strong>, we'll email you, then delete it 30 days later unless you sign in.</td></tr>
+<tr><td>Alert, click, follow-up and email delivery records</td><td>While your account is open. Then we delete them, or keep only anonymized statistics.</td></tr>
+<tr><td>Phone number</td><td>Until you remove it or close your account. Carriers keep their own record of a STOP reply.</td></tr>
+<tr><td>Consent records (text messages, marketing, auto-renewal, immediate start)</td><td>While the consent applies, then 5 years, the time limit for most claims, so we can prove what you agreed to</td></tr>
+<tr><td>Payment, receipt, invoice and tax records</td><td>6 years from the end of the year of the transaction, as Spanish commercial and tax law requires</td></tr>
+<tr><td>Sessions</td><td>Expire 90 days after last use; deleted 30 days later</td></tr>
+<tr><td>Push subscriptions</td><td>Until you turn push off, sign out on that device, or the push service tells us the subscription has expired</td></tr>
+<tr><td>Server, security and sign-in logs</td><td>90 days, or longer if needed to investigate an incident</td></tr>
+<tr><td>Support emails</td><td>3 years after the last message</td></tr>
+<tr><td>Pro waitlist</td><td>Until 6 months after Pro launches, or until you ask us to remove you</td></tr>
+<tr><td>Analytics events in PostHog</td><td>12 months</td></tr>
+<tr><td>Form drafts on your device</td><td>24 hours</td></tr>
+</tbody></table></div>
+<p>When you delete your account, we:</p>
+<ul>
+<li>cancel your active watches, and cancel any Membership at the end of the billing period</li>
+<li>sign you out of every device</li>
+<li>delete your email, phone number, channels, push subscriptions, consent records not needed as proof, and Google and Apple links, and revoke our Apple sign-in token</li>
+</ul>
+<p>We keep only records the law requires, such as tax records, and anonymized statistics. Backups are overwritten within 35 days.</p>
+<h2 id="s-10">10. Security</h2>
+<p>We protect your data with measures that include:</p>
+<ul>
+<li>encryption in transit (HTTPS only, with HSTS) and at rest</li>
+<li>no passwords to steal; session tokens and verification codes are stored only as hashes</li>
+<li>a database that isn't reachable from the internet</li>
+<li>least-privilege access for our systems</li>
+<li>verified signatures on webhooks from our providers</li>
+<li>secrets kept in a secure store, never in code</li>
+<li>security scans before every release</li>
+</ul>
+<p>No system is perfectly secure. If a breach puts your rights at risk, we'll notify the authority and, where required, you.</p>
+<h2 id="s-11">11. Your rights</h2>
+<h3 id="s-11-1">11.1 Everyone</h3>
+<p>Wherever you live, you can:</p>
+<ul>
+<li>ask what personal data we hold about you and get a copy</li>
+<li>ask us to correct it</li>
+<li>ask us to delete it</li>
+<li>turn off messages and tips in Settings, or with the link in any email; reply STOP to text messages</li>
+<li>withdraw consent at any time, without affecting earlier processing</li>
+</ul>
+<p>We don't discriminate against you for using your rights.</p>
+<h3 id="s-11-2">11.2 EEA, UK and Switzerland</h3>
+<p>You also have the right to:</p>
+<ul>
+<li><strong>restrict</strong> processing in some cases</li>
+<li><strong>object</strong> to processing based on legitimate interests, including to useful tips; we'll stop unless we have compelling grounds</li>
+<li><strong>portability</strong>: receive the data you gave us in a machine-readable format, or have it sent to another company</li>
+<li><strong>complain to a supervisory authority</strong>. Our lead authority is the Spanish <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es). You can also complain where you live or work: in the UK to the Information Commissioner's Office (ico.org.uk), and in Switzerland to the Federal Data Protection and Information Commissioner (edoeb.admin.ch). We'd appreciate the chance to deal with your concern first.</li>
+</ul>
+<h3 id="s-11-3">11.3 How to make a request</h3>
+<p>Email <strong><a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a></strong> or <strong><a href="mailto:support@rarereservations.com">support@rarereservations.com</a></strong> from your account email. For example, to delete your account, write "Delete my account" from the address you sign in with. If you write from another address, we'll ask you to confirm by replying from your account email, so no one else can get your data. You can use an authorized agent where your law allows; we'll ask for proof of their authority. We reply within <strong>1 month</strong>. We may extend that by 2 more months for complex requests, and if so we'll tell you why. Requests are free unless they're clearly unfounded or excessive.</p>
+<h2 id="s-12">12. Your communication choices</h2>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Message</th><th>Can you turn it off?</th></tr></thead>
+<tbody>
+<tr><td>Table alerts</td><td>Yes, per channel, in Settings. At least one channel must stay on while you have an active watch.</td></tr>
+<tr><td>Useful tips</td><td>Yes, in Settings or with one click in any tips email</td></tr>
+<tr><td>Offers and updates</td><td>Sent only if you opt in, in every country. Turn them off in Settings or with one click in any offer email.</td></tr>
+<tr><td>Account messages: codes, receipts, payment problems, security notices, renewal reminders</td><td>No, while your account is open, because they're needed to run it or required by law</td></tr>
+<tr><td>Text messages (SMS)</td><td>Reply STOP, or turn them off in Settings</td></tr>
+<tr><td>WhatsApp</td><td>Block our number, turn it off in Settings, or tap "Stop this watch" to stop one watch</td></tr>
+<tr><td>Push notifications</td><td>Turn them off per device in Settings or in your browser</td></tr>
+</tbody></table></div>
+<h2 id="s-13">13. Business users, Pro and integrations</h2>
+<p>If you use the Service for work, for example as an executive assistant or concierge, we're the controller of your account data, as this policy describes.</p>
+<p><strong>Pro client profiles.</strong> When a Pro customer adds information about their clients, such as names and dining preferences, the Pro customer is the controller of that data, and we process it as their processor under our Data Processing Addendum. If you're the client of a Pro customer, please contact them first about your data. We'll help them answer your request.</p>
+<p><strong>Integrations you connect.</strong> If you connect a third-party tool, such as an AI assistant that receives your alerts, we send it the data you authorize, such as alert details and booking links. That tool processes the data under its own privacy policy. You can disconnect it at any time.</p>
+<h2 id="s-14">14. Children</h2>
+<p>The Service is for people aged 18 and over. We don't knowingly collect data from anyone under 18. If you think a child has given us data, email <a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a> and we'll delete it.</p>
+<h2 id="s-15">15. Changes to this policy</h2>
+<p>When we make material changes, we'll email you before they take effect and show the new effective date here. Earlier versions are available on request.</p>
+<h2 id="s-16">16. Contact</h2>
+<p>Privacy questions and requests: <strong><a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a></strong><br />
+Everything else: <a href="mailto:support@rarereservations.com">support@rarereservations.com</a><br />
+Post: Rare Reservations S.L., Barcelona, Spain</p>
+<hr />
+<h2 id="s-a">Annex A: Regional supplements</h2>
+<h3 id="s-a-1">A.1 United States</h3>
+<p>This section applies to residents of US states with consumer privacy laws, such as California, Colorado, Connecticut, Virginia, Texas and Oregon, to the extent those laws apply to us.</p>
+<ul>
+<li><strong>Categories collected in the last 12 months:</strong>
+<ul>
+<li>identifiers: email, phone number, account IDs, IP address</li>
+<li>commercial information: plans bought, payment records</li>
+<li>internet activity: pages viewed, alert clicks</li>
+<li>approximate geolocation: country and time zone</li>
+<li>inferences: none</li>
+<li>sensitive personal information: none, other than account sign-in data used only to sign you in</li>
+</ul>
+<p>Sources, purposes and recipients are as in sections 3, 4 and 7. We keep each category for the periods in section 9.</p></li>
+<li><strong>We don't sell or share personal data</strong>, as defined by these laws, and haven't in the last 12 months. We don't knowingly sell or share data of consumers under 16.</li>
+<li><strong>Your rights:</strong> to know or access, correct, delete, get a portable copy, and opt out of sale, sharing, targeted advertising and profiling. We do none of these, but you can still ask. You can also appeal if we deny a request: reply to our decision with the subject "Appeal", and we'll respond within 45 days. If we deny the appeal, you can contact your state attorney general.</li>
+<li><strong>Global Privacy Control:</strong> we treat a GPC signal from your browser as a request to opt out of sale and sharing, and as a refusal of analytics cookies.</li>
+<li><strong>Shine the Light (California):</strong> we don't share personal information with third parties for their direct marketing.</li>
+<li><strong>Messaging:</strong> section 7.4 applies to text messages (SMS).</li>
+</ul>
+<h3 id="s-a-2">A.2 Canada</h3>
+<p>We follow PIPEDA and applicable provincial laws. Your data is stored outside Canada, mainly in the United States, and may be accessed by courts and authorities there under their laws. You can access and correct your data, and withdraw consent, as section 11 describes. You can complain to the Office of the Privacy Commissioner of Canada, or in Quebec to the Commission d'accès à l'information. <strong>Quebec:</strong> analytics technologies that could be used to profile you are off by default, and are turned on only if you accept them. Our person in charge of the protection of personal information can be reached at <a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a>.</p>
+<h3 id="s-a-3">A.3 Japan</h3>
+<p>We handle personal information in line with the Act on the Protection of Personal Information (APPI).</p>
+<ul>
+<li><strong>Transfers abroad.</strong> Your data is provided to recipients in the United States and in EU countries such as Spain and Ireland. We've chosen providers that maintain measures equivalent to those the APPI requires, and we supervise them through contracts. Information on the personal data protection systems of these countries is published by Japan's Personal Information Protection Commission (www.ppc.go.jp).</li>
+<li><strong>Security measures.</strong> Our security measures are in section 10. You can ask us for more detail.</li>
+<li><strong>Your rights.</strong> You can ask us to disclose, correct, add to, delete, stop using or stop transferring your data, through <a href="mailto:privacy@rarereservations.com">privacy@rarereservations.com</a>.</li>
+</ul>
+<h3 id="s-a-4">A.4 Australia and New Zealand</h3>
+<p>We handle personal information in line with the Australian Privacy Principles and the New Zealand Privacy Act 2020, to the extent they apply to us. Your data is held overseas, mainly in the United States. You can access and correct it as section 11 describes. You can complain to the Office of the Australian Information Commissioner (oaic.gov.au) or the New Zealand Office of the Privacy Commissioner (privacy.org.nz).</p>
+<h3 id="s-a-5">A.5 Other countries</h3>
+<p>If you live elsewhere, section 11.1 applies. Where your local law gives you more rights, we'll honor them.</p>
+<hr />
+<h2 id="s-b">Annex B: Cookies and similar technologies</h2>
+<p>We use as few cookies and similar technologies as we can. In the EEA, the UK and Canada, the banner keeps analytics off until you choose "Accept". Everywhere, you can change your choice at any time with <strong>Cookie settings</strong> in the footer, and a Global Privacy Control signal turns analytics off.</p>
+<h3 id="s-b-1">B.1 Strictly necessary (no consent needed)</h3>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Name or type</th><th>Set by</th><th>Purpose</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td>Session cookie</td><td>Rare Reservations</td><td>Keeps you signed in on this device</td><td>90 days from last use</td></tr>
+<tr><td>Consent cookie</td><td>Rare Reservations</td><td>Remembers your cookie choice</td><td>12 months</td></tr>
+<tr><td>Watch form draft (localStorage)</td><td>Rare Reservations</td><td>Saves your form entries if the page reloads. It's never read by analytics.</td><td>24 hours</td></tr>
+<tr><td>Push service worker and subscription</td><td>Rare Reservations, your browser</td><td>Delivers the push notifications you turned on</td><td>Until you turn push off</td></tr>
+<tr><td><code>g_state</code> and Google Identity Services cookies</td><td>Google</td><td>Sign in with Google, including One Tap. Loaded only when you tap a button to sign in.</td><td>180 days to 24 months</td></tr>
+<tr><td>Sign in with Apple</td><td>Apple</td><td>Sign in with Apple, when you use it</td><td>Session</td></tr>
+<tr><td>Cloudflare Turnstile</td><td>Cloudflare</td><td>Checks that you're not a bot, when you request several sign-in codes</td><td>5 minutes</td></tr>
+<tr><td>Stripe (<code>__stripe_mid</code>, <code>__stripe_sid</code>)</td><td>Stripe</td><td>Fraud prevention during checkout</td><td>1 year; 30 minutes</td></tr>
+</tbody></table></div>
+<h3 id="s-b-2">B.2 Analytics (consent required in the EEA, the UK and Canada)</h3>
+<div class="table-wrap"><table class="legal-table">
+<thead><tr><th>Name</th><th>Set by</th><th>Purpose</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><code>ph_*</code> cookie and local storage</td><td>PostHog (EU cloud)</td><td>Recognize your browser across visits, to measure page views and the sign-up and checkout funnel, and record performance metrics</td><td>12 months</td></tr>
+</tbody></table></div>
+<h3 id="s-b-3">B.3 What we don't use</h3>
+<p>We don't use advertising cookies, social-media pixels, cross-site tracking or session recording. We don't use tracking pixels in emails. Links in alert messages go through our own address, rarereservations.com/a/…, so we can open the booking page and check whether the table is still there. That's part of the alert service.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rare Reservations, S.L. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a> &bull;
+        <a href="aviso-legal.html">Aviso Legal</a> &bull;
+        <a href="terms-of-service.html">Terms of Service</a> &bull;
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
