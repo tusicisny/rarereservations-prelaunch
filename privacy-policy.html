@@ -350,6 +350,7 @@
 <tr><td>Time zone and country</td><td>Your time zone, from your browser, to show release times in your time. Your country, from your IP address, to pick your currency and the phone country.</td></tr>
 <tr><td>Alert records</td><td>Which alerts we created for you, on which channels, whether each was delivered, and when you clicked an alert link. Clicking a link also triggers a check of whether the table was still available.</td></tr>
 <tr><td>Email delivery events</td><td>Whether an email was delivered, bounced or marked as spam. We don't track whether you opened an email.</td></tr>
+<tr><td>Email link clicks</td><td>When you click a link in a tips or offers email: which email, which link and when. Links in those emails go through our own address, rarereservations.com/e/…, to count this. We don't track clicks in account emails such as codes and receipts.</td></tr>
 <tr><td>Account events</td><td>A log of changes to your account, such as email, phone, sign-in method, channel settings and unsubscribes, with masked old and new values</td></tr>
 <tr><td>Technical and security data</td><td>IP address, request logs, and bot checks (Cloudflare Turnstile), used for security, rate limits and fraud prevention</td></tr>
 <tr><td>Analytics</td><td>Pages you view, steps in sign-up and checkout, the device type, and where you came from, such as a referring site or campaign tag, linked by an identifier in a cookie. In the EEA, the UK and Canada, only if you accept analytics cookies. See section 4 and Annex B.</td></tr>
@@ -376,7 +377,7 @@
 <li><strong>To send useful tips</strong> about the Service you use, such as a release checklist before tables open, or how to set up push on iPhone. You can turn these off in Settings or with the link in each email.</li>
 <li><strong>To send offers and updates, only if you opted in.</strong> You can withdraw at any time.</li>
 <li><strong>To keep the Service secure:</strong> prevent fraud and abuse, enforce limits, detect bots, and investigate problems.</li>
-<li><strong>To understand and improve the Service:</strong> measure sign-up and checkout funnels, test prices and features, and measure how fast alerts arrive and how often they lead to a booking.</li>
+<li><strong>To understand and improve the Service:</strong> measure sign-up and checkout funnels, test prices and features, measure how fast alerts arrive and how often they lead to a booking, and learn which of our emails people find useful.</li>
 <li><strong>To meet legal obligations,</strong> and to establish, exercise or defend legal claims.</li>
 </ol>
 <h2 id="s-5">5. Legal bases (EEA, UK and Switzerland)</h2>
@@ -393,7 +394,8 @@
 <tr><td>7. Security and fraud prevention</td><td>IP address, logs, bot checks, account events</td><td><strong>Legitimate interests</strong>: protecting users, the Service and the restaurants and platforms we read from</td></tr>
 <tr><td>8. Analytics with cookies</td><td>Usage data, a cookie identifier</td><td><strong>Consent</strong> in the EEA, the UK and Canada (art. 6(1)(a); ePrivacy rules in LSSI-CE art. 22.2 and PECR). Elsewhere, <strong>legitimate interests</strong>: understanding how people use the site; you can refuse with Cookie settings or a Global Privacy Control signal.</td></tr>
 <tr><td>8. Analytics from our server records, after you sign in</td><td>Account identifier, sign-up and checkout steps, without your IP address</td><td><strong>Legitimate interests</strong>: measuring whether the Service works and sells. You can object (section 11).</td></tr>
-<tr><td>8. Analytics without cookies, from our own records</td><td>Alert, click and follow-up records, payment records</td><td><strong>Legitimate interests</strong>: understanding whether the Service works, using aggregated measures</td></tr>
+<tr><td>8. Analytics without cookies, from our own records</td><td>Alert, click and follow-up records, payment records</td><td><strong>Legitimate interests</strong>: understanding whether the Service works, using aggregated measures.</td></tr>
+<tr><td>8. Clicks on links in tips and offers emails</td><td>Email link clicks, account identifier</td><td><strong>Legitimate interests</strong>: learning which emails are useful, so we send better and fewer ones. You can object (section 11) or unsubscribe from those emails at any time.</td></tr>
 <tr><td>8. Price tests</td><td>Assignment to a test group when you create an account, purchase records</td><td><strong>Legitimate interests</strong>: setting fair prices. Assignment is random, and the prices you see are the prices you pay.</td></tr>
 <tr><td>9. Legal obligations and claims</td><td>Whatever is relevant</td><td><strong>Legal obligation</strong>; <strong>legitimate interests</strong> in defending claims</td></tr>
 </tbody></table></div>
@@ -464,6 +466,7 @@
 <tr><td>Support emails</td><td>3 years after the last message</td></tr>
 <tr><td>Pro waitlist</td><td>Until 6 months after Pro launches, or until you ask us to remove you</td></tr>
 <tr><td>Analytics events in PostHog</td><td>12 months</td></tr>
+<tr><td>Email link clicks</td><td>12 months, or until you close your account if sooner</td></tr>
 <tr><td>Form drafts on your device</td><td>24 hours</td></tr>
 </tbody></table></div>
 <p>When you delete your account, we:</p>
@@ -587,7 +590,7 @@ Post: Rare Reservations S.L., Av. Diagonal, 534, entr. Izq., 08006 Barcelona, Sp
 <tr><td><code>ph_*</code> cookie and local storage</td><td>PostHog (EU cloud)</td><td>Recognize your browser across visits, to measure page views and the sign-up and checkout funnel, and record performance metrics</td><td>12 months</td></tr>
 </tbody></table></div>
 <h3 id="s-b-3">B.3 What we don't use</h3>
-<p>We don't use advertising cookies, social-media pixels, cross-site tracking or session recording. We don't use tracking pixels in emails. Links in alert messages go through our own address, rarereservations.com/a/…, so we can open the booking page and check whether the table is still there. That's part of the alert service.</p>
+<p>We don't use advertising cookies, social-media pixels, cross-site tracking or session recording. We don't use tracking pixels in emails, so we don't know whether you open one. Links in alert messages go through our own address, rarereservations.com/a/…, so we can open the booking page and check whether the table is still there. That's part of the alert service. Links in tips and offers emails go through rarereservations.com/e/…, so we can count which emails people find useful (section 3.2). Neither stores anything on your device.</p>
   </main>
 
   <!-- Footer -->
